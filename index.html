@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareSync | 혁신적인 헬스케어 솔루션</title>
+    <meta name="description" content="데이터와 기술로 더 나은 건강한 삶을 만듭니다.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0A6B55;
+            --primary-light: #E8F5F1;
+            --accent: #2DB89A;
+            --text-dark: #1A1A2E;
+            --text-muted: #6B7280;
+            --bg-cream: #FAFAF8;
+            --white: #FFFFFF;
+            
+            --font-main: 'Noto Sans KR', sans-serif;
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Typography utility */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-family: var(--font-main);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .navbar.scrolled .logo,
+        .navbar.scrolled .nav-links a {
+            color: var(--text-dark);
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo i {
+            color: var(--accent);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .menu-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .navbar.scrolled .menu-toggle {
+            color: var(--text-dark);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: var(--font-display);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(45, 184, 154, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(45, 184, 154, 0.4);
+            background-color: #24A286;
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        /* 1. Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 107, 85, 0.85), rgba(10, 107, 85, 0.7)), 
+                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 0 5%;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* 2. Who We Are */
+        .who-we-are {
+            background-color: var(--bg-cream);
+        }
+        .who-we-are .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .who-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        .who-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+        .stats-container {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .stat-item p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+        .team-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        .team-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .team-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+        .team-info p {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Parallax Divider Section */
+        .parallax-divider {
+            height: 400px;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
+                        url('https://images.unsplash.com/photo-1551076805-e18690c5e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .parallax-divider h2 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        .parallax-divider p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* 3. Services */
+        .services {
+            background-color: var(--white);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .service-card {
+            padding: 3rem 2rem;
+            background-color: var(--primary-light);
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            z-index: -1;
+            transition: transform 0.4s ease;
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+        .service-card:hover::after {
+            transform: scaleY(1);
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: color 0.4s;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            transition: color 0.4s;
+        }
+        .service-card p {
+            color: var(--text-muted);
+            transition: color 0.4s;
+        }
+        .service-card:hover .service-icon,
+        .service-card:hover h3,
+        .service-card:hover p {
+            color: var(--white);
+        }
+
+        /* 4. Partners */
+        .partners {
+            background-color: var(--bg-cream);
+            padding: 4rem 0;
+        }
+        .partners .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+            opacity: 0.6;
+        }
+        .partners-grid i {
+            font-size: 3rem;
+            color: var(--text-muted);
+            transition: all 0.3s;
+        }
+        .partners-grid i:hover {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+        
+        /* 5. Contact */
+        .contact {
+            background-color: var(--white);
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+        .contact-info {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 3rem;
+        }
+        .contact-info h2 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .contact-form-wrap {
+            padding: 4rem 3rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: all 0.3s;
+            background-color: var(--bg-cream);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(45, 184, 154, 0.1);
+            background-color: var(--white);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .error-msg {
+            color: #EF4444;
+            font-size: 0.8rem;
+            margin-top: 0.4rem;
+            display: none;
+        }
+        .form-control.error {
+            border-color: #EF4444;
+            background-color: #FEF2F2;
+        }
+
+        /* 6. Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .footer-logo i {
+            color: var(--accent);
+        }
+        .footer-info {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        .footer-links a {
+            color: #9CA3AF;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+        }
+        .newsletter-form button {
+            background-color: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .newsletter-form button:hover {
+            background-color: #24A286;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 992px) {
+            .who-we-are .container {
+                grid-template-columns: 1fr;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                gap: 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: clip-path 0.3s ease-in-out;
+            }
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            .navbar.scrolled .nav-links {
+                background-color: var(--white);
+            }
+            .nav-links a {
+                color: var(--text-dark);
+                padding: 1.5rem 5%;
+                display: block;
+                border-bottom: 1px solid #F3F4F6;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; }
+            
+            .services-grid, 
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <i class="fa-solid fa-heart-pulse"></i> CareSync
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#about">Who We Are</a>
+            <a href="#services">Services</a>
+            <a href="#partners">Partners</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>당신의 헬스케어 여정을<br>새롭게 정의합니다</h1>
+            <p>최첨단 데이터 분석과 인간 중심의 진료 네트워크를 결합하여 맞춤형 건강 관리 솔루션을 제공합니다.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">솔루션 알아보기</a>
+                <a href="#contact" class="btn btn-outline">상담 예약하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WHO WE ARE -->
+    <section class="who-we-are" id="about">
+        <div class="container">
+            <div class="who-text" data-aos="fade-right">
+                <h2 class="section-title" style="text-align: left;">의료의 기준을 높이다</h2>
+                <p>CareSync는 의료진과 환자가 매끄럽게 연결되는 디지털 생태계를 구축합니다. 우리는 건강 정보의 파편화를 해결하고 누구나 언제 어디서든 높은 품질의 헬스케어 서비스에 접근할 수 있도록 돕습니다.</p>
+                <p>전문 의료인, 데이터 과학자, UX 디자이너로 구성된 우리 팀은 환자의 경험을 최우선으로 생각하며 내일의 의료 환경을 오늘 현실로 만듭니다.</p>
+                
+                <div class="stats-container" id="counter-section">
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="150">0</h3>
+                        <p>제휴 병원 네트워크</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>환자 만족도 (%)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-grid" data-aos="fade-left">
+                <!-- Team 1 -->
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Dr. Sarah Lee" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <h4>Dr. Sarah Lee</h4>
+                        <p>Chief Medical Officer</p>
+                    </div>
+                </div>
+                <!-- Team 2 -->
+                <div class="team-card" style="transform: translateY(20px);">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="James Park" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <h4>James Park</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                <!-- Team 3 -->
+                <div class="team-card" style="transform: translateY(40px);">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Elena Kim" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <h4>Elena Kim</h4>
+                        <p>Head of Data Sci</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Divider -->
+    <div class="parallax-divider">
+        <div data-aos="zoom-in">
+            <h2>첨단 기술과 휴먼케어의 만남</h2>
+            <p>우리는 데이터가 병을 예측하고 전문의가 마음을 치료하는 미래를 만듭니다.</p>
+        </div>
+    </div>
+
+    <!-- 3. SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">우리의 핵심 서비스</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">환자와 의사 모두를 위한 통합 디지털 헬스케어 솔루션</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-mobile-screen-button service-icon"></i>
+                    <h3>원격 통합 진료 플랫폼</h3>
+                    <p>언제 어디서나 화상으로 전문의와 상담하고 처방전까지 안전하게 발급받을 수 있는 비대면 진료 시스템입니다.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-chart-line service-icon"></i>
+                    <h3>AI 건강 예측 모니터링</h3>
+                    <p>웨어러블 디바이스와 연동되어 실시간 생체 데이터를 수집, 분석하여 질병의 초기 징후를 선제적으로 알려줍니다.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-notes-medical service-icon"></i>
+                    <h3>맞춤형 전자 의무 기록</h3>
+                    <p>파편화된 의료 기록을 블록체인 기반으로 안전하게 통합하여 병원 간 매끄러운 데이터 연동을 지원합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PARTNERS -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">함께하는 파트너</h2>
+            <div class="partners-grid" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-brands fa-aws"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-solid fa-hospital"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-solid fa-heart-circle-plus"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container" data-aos="fade-up">
+                <div class="contact-info">
+                    <h2>상담 및 파트너십 문의</h2>
+                    <p>CareSync 솔루션 도입이나 제휴에 관해 궁금한 점이 있으시다면 언제든 문의해 주세요. 담당자가 빠른 시일 내에 연락드리겠습니다.</p>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>02-1234-5678</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@caresync.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>서울시 강남구 테헤란로 123 CareSync 빌딩 8층</span>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrap">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label class="form-label" for="name">이름 (소속기관)</label>
+                            <input type="text" id="name" class="form-control" placeholder="홍길동 (AA병원)">
+                            <div class="error-msg" id="nameError">이름을 입력해주세요.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">이메일 주소</label>
+                            <input type="email" id="email" class="form-control" placeholder="example@domain.com">
+                            <div class="error-msg" id="emailError">유효한 이메일 주소를 입력해주세요.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">연락처</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="010-0000-0000">
+                            <div class="error-msg" id="phoneError">연락처를 입력해주세요.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">문의 내용</label>
+                            <textarea id="message" class="form-control" placeholder="문의하실 내용을 상세히 적어주세요."></textarea>
+                            <div class="error-msg" id="messageError">문의 내용을 입력해주세요.</div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">문의 접수하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-heart-pulse"></i> CareSync
+                    </a>
+                    <p class="footer-info">데이터 기반의 맞춤형 솔루션으로 모두의 건강한 내일을 만들어가는 혁신적인 헬스케어 플랫폼 기업입니다.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">메뉴</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">기업 소개</a></li>
+                        <li><a href="#services">서비스 안내</a></li>
+                        <li><a href="#partners">파트너십</a></li>
+                        <li><a href="#contact">문의하기</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">법적 고지</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">환자 권리 장전</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">뉴스레터 구독</h4>
+                    <p style="color: #9CA3AF; font-size: 0.9rem;">최신 헬스케어 트렌드와 CareSync의 소식을 메일로 받아보세요.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('구독이 완료되었습니다.');">
+                        <input type="email" placeholder="이메일 주소" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2026 CareSync Inc. All rights reserved. 서울시 강남구 테헤란로 123 (대표: James Park)
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Init AOS (Animation On Scroll)
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Counter Animation using requestAnimationFrame
+        const counters = document.querySelectorAll('.counter');
+        const speed = 2000; // 2 seconds
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = speed;
+                let startTimestamp = null;
+                
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    
+                    // easeOutQuart
+                    const easeProgress = 1 - Math.pow(1 - progress, 4);
+                    
+                    counter.innerText = Math.floor(easeProgress * target) + (target > 100 ? '+' : '%');
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        counter.innerText = target + (target > 100 ? '+' : '%');
+                    }
+                };
+                window.requestAnimationFrame(step);
+            });
+        };
+
+        // Intersection Observer for Counter triggers
+        const counterSection = document.getElementById('counter-section');
+        let animated = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animated) {
+                    animateCounters();
+                    animated = true;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (counterSection) {
+            observer.observe(counterSection);
+        }
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            const fields = [
+                { id: 'name', type: 'text', errorId: 'nameError' },
+                { id: 'email', type: 'email', errorId: 'emailError' },
+                { id: 'phone', type: 'text', errorId: 'phoneError' },
+                { id: 'message', type: 'text', errorId: 'messageError' }
+            ];
+            
+            fields.forEach(field => {
+                const input = document.getElementById(field.id);
+                const error = document.getElementById(field.errorId);
+                
+                if (input.value.trim() === '') {
+                    input.classList.add('error');
+                    error.style.display = 'block';
+                    isValid = false;
+                } else if (field.type === 'email' && !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(input.value)) {
+                    input.classList.add('error');
+                    error.style.display = 'block';
+                    isValid = false;
+                } else {
+                    input.classList.remove('error');
+                    error.style.display = 'none';
+                }
+            });
+            
+            if (isValid) {
+                // Mock form submission
+                const btn = contactForm.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = '전송 중...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('성공적으로 접수되었습니다. 곧 연락드리겠습니다.');
+                    contactForm.reset();
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }, 1000);
+            }
+        });
+
+        // Remove error styling on input
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function() {
+                this.classList.remove('error');
+                const errorId = this.id + 'Error';
+                const errorEl = document.getElementById(errorId);
+                if (errorEl) errorEl.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
