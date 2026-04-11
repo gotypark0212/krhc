@@ -588,6 +588,77 @@
             font-size: 1rem;
             opacity: 0.9;
         }
+        
+        /* Obesity Care Panel Styles */
+        .obesity-care-content {
+            width: 100%;
+        }
+        .platform-stats.grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 3.5rem;
+        }
+        .stat-surface-box {
+            background-color: var(--primary-light);
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .stat-surface-box:hover {
+            transform: translateY(-5px);
+        }
+        .problem-cards.grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        .problem-card {
+            background-color: var(--white);
+            border: 1px solid #E5E7EB;
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        .problem-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            border-color: var(--primary-light);
+        }
+        .p-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .badge-red { background-color: #FEE2E2; color: #DC2626; }
+        .badge-purple { background-color: #F3E8FF; color: #7E22CE; }
+        .badge-orange { background-color: #FFEDD5; color: #C2410C; }
+        .badge-green { background-color: #D1FAE5; color: #059669; }
+        .badge-yellow { background-color: #FEF3C7; color: #D97706; }
+        .badge-lime { background-color: #ECFCCB; color: #65A30D; }
+        .problem-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .problem-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        .why-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
         .entry-index {
             font-family: var(--font-display);
             font-size: 2rem;
@@ -895,7 +966,13 @@
             .platform-stats.grid-3 {
                 grid-template-columns: 1fr;
             }
+            .platform-stats.grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .platform-benefits.grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .problem-cards.grid-3 {
                 grid-template-columns: 1fr;
             }
             .platform-title {
@@ -1022,7 +1099,7 @@
                         <span>01</span> 반려생활 플랫폼
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(2)">
-                        <span>02</span> 서비스 둘
+                        <span>02</span> 비만케어 · Obesity Management
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(3)">
                         <span>03</span> 서비스 셋
@@ -1040,7 +1117,7 @@
                                     <div class="platform-header">
                                         <span class="platform-label">반려생활 플랫폼</span>
                                         <h3 class="platform-title">반려동물과 함께하는 삶, 더 건강하고 더 행복하게</h3>
-                                        <p class="platform-lead">반려동물은 단순한 가족 구성원을 넘어 우리의 신체적·정신적 건강에 실질적인 영향을 미칩니다. 올바른 정보와 커뮤니티, 그리고 신뢰할 수 있는 제품이 함께할 때 반려생활은 더욱 풍요로워집니다.</p>
+                                        <p class="platform-lead">반려동물은 단순한 가족 구성원을 넘어 우리의 신체적·정신적 건강에 실질적인 영향을 미칩니다.<br> 올바른 정보와 커뮤니티, 그리고 신뢰할 수 있는 제품이 함께할 때 반려생활은 더욱 풍요로워집니다.</p>
                                     </div>
 
                                     <div class="platform-stats grid-3">
@@ -1118,11 +1195,93 @@
                             </div>
                             
                             <!-- Service 2 Panel -->
-                            <div class="service-entry-panel" id="service-panel-2" style="display:none;">
-                                <div class="entry-index">02</div>
-                                <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="두 번째 핵심 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="두 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
+                            <div class="service-entry-panel obesity-platform-panel" id="service-panel-2" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">비만케어 · Obesity Management</span>
+                                        <h3 class="platform-title">비만은 단순한 체중 문제가 아닙니다</h3>
+                                        <p class="platform-lead">비만은 수면장애, 심혈관 질환, 당뇨, 정신건강 문제까지 삶 전반을 위협하는 복합적인 건강 위기입니다. 수면과 체중, 두 가지 핵심 요소를 함께 관리할 때 비로소 근본적인 변화가 시작됩니다.</p>
+                                    </div>
+
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">38%</div>
+                                            <div class="stat-label">국내 성인 비만율</div>
+                                            <div class="stat-desc">2023년 기준, 꾸준히 증가 중</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">2배</div>
+                                            <div class="stat-label">비만인의 수면무호흡 발생 위험</div>
+                                            <div class="stat-desc">정상 체중 대비</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5배</div>
+                                            <div class="stat-label">당뇨 발병 위험 증가</div>
+                                            <div class="stat-desc">심혈관 질환 위험도 함께 상승</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">11조</div>
+                                            <div class="stat-label">비만 관련 사회경제적 손실</div>
+                                            <div class="stat-desc">연간 국내 추정치 (원)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">신체 질환</span>
+                                            <h4>심혈관·대사 질환</h4>
+                                            <p>고혈압, 이상지질혈증, 2형 당뇨, 지방간 등 만성 대사 질환의 핵심 위험인자입니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">수면 장애</span>
+                                            <h4>수면무호흡·불면증</h4>
+                                            <p>체지방 증가로 기도가 좁아져 수면무호흡이 심화되고, 수면의 질 저하가 비만을 더욱 악화시키는 악순환이 반복됩니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">근골격계</span>
+                                            <h4>관절·척추 질환</h4>
+                                            <p>과도한 체중은 무릎·고관절·척추에 지속적인 부담을 주어 퇴행성 관절염과 만성 통증을 유발합니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">정신 건강</span>
+                                            <h4>우울·불안·자존감 저하</h4>
+                                            <p>체형에 대한 사회적 편견과 호르몬 불균형은 우울증과 불안장애 위험을 높이고 삶의 질을 떨어뜨립니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">호흡기</span>
+                                            <h4>폐기능 저하</h4>
+                                            <p>복부 지방이 횡격막을 압박해 폐활량을 줄이고, 운동 시 호흡 곤란과 피로감을 가중시킵니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">사회·경제</span>
+                                            <h4>생산성 저하·의료비 증가</h4>
+                                            <p>만성 피로와 잦은 질병으로 업무 능력이 떨어지고, 장기적으로 막대한 의료비 부담으로 이어집니다.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="platform-why">
+                                        <h4>수면 개선과 체중 관리가 필요한 이유</h4>
+                                        <p class="why-intro">비만을 근본적으로 해결하려면 체중뿐 아니라 그 이면의 수면의 질까지 함께 다루어야 합니다. 수면과 체중은 서로 긴밀하게 연결된 하나의 건강 사이클이기 때문입니다.</p>
+                                        <ol class="why-list">
+                                            <li>
+                                                <strong>수면 부족이 비만을 만든다</strong>
+                                                <span>수면이 부족하면 식욕 억제 호르몬은 줄고 식욕 촉진 호르몬은 늘어 과식으로 이어집니다. 기초대사량도 낮아지기 때문에 수면 문제를 해결하지 않으면 식이 조절만으로는 체중 감량 효과가 반감됩니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>비만이 다시 수면을 망친다</strong>
+                                                <span>체지방이 쌓일수록 기도가 좁아져 수면무호흡이 심해지고, 깊은 잠을 자지 못해 피로와 활동량 감소, 과식이 반복됩니다. 비만과 수면 장애는 서로를 악화시키는 악순환 구조입니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>체중 감량은 데이터와 지속성이 핵심이다</strong>
+                                                <span>무분별한 다이어트는 근손실과 요요를 반복시킵니다. 개인의 신체 데이터를 기반으로 식이, 운동, 수면을 통합 관리할 때 건강한 감량과 장기적인 체중 유지가 가능해집니다.</span>
+                                            </li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="platform-footer">
+                                        <p class="final-motto">수면을 고치면 체중이 바뀌고, 체중이 바뀌면 삶이 달라집니다</p>
+                                        <p class="final-sub">데이터 기반 비만케어로 더 건강한 일상을 설계하세요</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -1425,7 +1584,7 @@
             // Update panels
             document.querySelectorAll('.service-entry-panel').forEach((panel, index) => {
                 if (index === tabIndex - 1) {
-                    panel.style.display = panel.classList.contains('pet-platform-panel') ? 'block' : 'flex';
+                    panel.style.display = (panel.classList.contains('pet-platform-panel') || panel.classList.contains('obesity-platform-panel')) ? 'block' : 'flex';
                 } else {
                     panel.style.display = 'none';
                 }
