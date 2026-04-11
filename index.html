@@ -396,16 +396,6 @@
             position: relative;
             min-height: 400px; /* maintain consistent height when switching panels */
         }
-        .folder-paper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 4.5rem;
-            width: 2px;
-            background-color: rgba(239, 68, 68, 0.2);
-            z-index: 0;
-        }
         .services-register-form {
             position: relative;
             z-index: 2;
@@ -629,11 +619,6 @@
             background-color: var(--white);
             border-color: var(--accent);
             box-shadow: 0 0 0 4px rgba(45, 184, 154, 0.1);
-        }
-        .btn-register {
-            margin-top: 2rem;
-            padding: 1rem 3rem;
-            font-size: 1.1rem;
         }
 
         /* 4. Partners */
@@ -903,9 +888,6 @@
             .folder-paper {
                 padding: 2rem 1rem;
             }
-            .folder-paper::before {
-                left: 3.5rem;
-            }
             .entry-index {
                 width: 2.5rem;
                 font-size: 1.5rem;
@@ -1160,10 +1142,6 @@
                                     <input type="text" class="form-control" placeholder="네 번째 핵심 서비스 명칭 (입력 공간)">
                                     <textarea class="form-control" placeholder="네 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
                                 </div>
-                            </div>
-
-                            <div class="form-actions text-center">
-                                <button type="button" class="btn btn-primary btn-register"><i class="fa-solid fa-save"></i> 저장하기</button>
                             </div>
                         </form>
                     </div>
