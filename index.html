@@ -421,6 +421,183 @@
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Pet Platform Panel Styles */
+        .pet-platform-content {
+            width: 100%;
+        }
+        .platform-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .platform-label {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .platform-title {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        .platform-lead {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .platform-stats.grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+        .stat-box {
+            background-color: var(--bg-cream);
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+            transition: transform 0.3s;
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            border-color: var(--primary-light);
+        }
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        .stat-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .platform-benefits.grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .benefit-card {
+            display: flex;
+            gap: 1.2rem;
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            border-left: 4px solid var(--accent);
+        }
+        .b-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .b-info h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .b-info p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .platform-why {
+            background-color: var(--bg-cream);
+            padding: 3rem 2.5rem;
+            border-radius: 16px;
+            margin-bottom: 4rem;
+            border: 1px solid #E5E7EB;
+        }
+        .platform-why h4 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary);
+        }
+        .why-list {
+            list-style: none;
+            counter-reset: why-counter;
+        }
+        .why-list li {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 2rem;
+        }
+        .why-list li:last-child {
+            margin-bottom: 0;
+        }
+        .why-list li::before {
+            counter-increment: why-counter;
+            content: counter(why-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-display);
+        }
+        .why-list strong {
+            display: block;
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+        .why-list span {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .platform-footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary), #074b3b);
+            border-radius: 12px;
+            color: var(--white);
+        }
+        .final-motto {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-display);
+            margin-bottom: 0.5rem;
+        }
+        .final-sub {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
         .entry-index {
             font-family: var(--font-display);
             font-size: 2rem;
@@ -733,6 +910,18 @@
                 width: 2.5rem;
                 font-size: 1.5rem;
             }
+            .platform-stats.grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .platform-benefits.grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .platform-title {
+                font-size: 1.8rem;
+            }
+            .platform-why {
+                padding: 2rem 1.5rem;
+            }
             
             .partners-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -848,7 +1037,7 @@
             <div class="folder-ui-wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="folder-tabs-container">
                     <button class="folder-tab active" onclick="switchFolderTab(1)">
-                        <span>01</span> 서비스 하나
+                        <span>01</span> 반려생활 플랫폼
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(2)">
                         <span>02</span> 서비스 둘
@@ -864,11 +1053,85 @@
                     <div class="folder-paper">
                         <form class="services-register-form">
                             <!-- Service 1 Panel -->
-                            <div class="service-entry-panel" id="service-panel-1" style="display:flex;">
-                                <div class="entry-index">01</div>
-                                <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="첫 번째 핵심 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="첫 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
+                            <div class="service-entry-panel pet-platform-panel active" id="service-panel-1" style="display:block;">
+                                <div class="pet-platform-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">반려생활 플랫폼</span>
+                                        <h3 class="platform-title">반려동물과 함께하는 삶, 더 건강하고 더 행복하게</h3>
+                                        <p class="platform-lead">반려동물은 단순한 가족 구성원을 넘어 우리의 신체적·정신적 건강에 실질적인 영향을 미칩니다. 올바른 정보와 커뮤니티, 그리고 신뢰할 수 있는 제품이 함께할 때 반려생활은 더욱 풍요로워집니다.</p>
+                                    </div>
+
+                                    <div class="platform-stats grid-3">
+                                        <div class="stat-box">
+                                            <div class="stat-value">1,500만+</div>
+                                            <div class="stat-label">국내 반려동물 양육 가구 수</div>
+                                            <div class="stat-desc">전체 가구의 약 25% 이상</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-value">30%↓</div>
+                                            <div class="stat-label">심혈관 질환 위험 감소</div>
+                                            <div class="stat-desc">미국 심장학회 연구 결과</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-value">5조+</div>
+                                            <div class="stat-label">국내 반려동물 시장 규모</div>
+                                            <div class="stat-desc">2027년 6조 원 돌파 전망</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="platform-benefits grid-2">
+                                        <div class="benefit-card">
+                                            <div class="b-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                                            <div class="b-info">
+                                                <h4>심혈관 건강 개선</h4>
+                                                <p>규칙적인 산책과 활동으로 혈압과 콜레스테롤이 안정되고, 심장 질환 위험이 유의미하게 낮아집니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <div class="b-icon"><i class="fa-solid fa-face-smile"></i></div>
+                                            <div class="b-info">
+                                                <h4>스트레스 및 불안 완화</h4>
+                                                <p>반려동물과의 교감은 스트레스 호르몬을 낮추고 행복 호르몬 분비를 촉진해 정서적 안정을 돕습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <div class="b-icon"><i class="fa-solid fa-user-group"></i></div>
+                                            <div class="b-info">
+                                                <h4>사회적 연결과 외로움 해소</h4>
+                                                <p>반려동물은 사람 간의 교류를 자연스럽게 이끌어 고립감을 줄이고 소속감을 높여줍니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <div class="b-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                            <div class="b-info">
+                                                <h4>생활 루틴과 목적의식 형성</h4>
+                                                <p>돌봄의 일상적 반복이 규칙적인 생활 리듬을 만들고, 삶의 목적의식과 자기 효능감을 키워줍니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="platform-why">
+                                        <h4>왜 전문 플랫폼이 필요한가</h4>
+                                        <ol class="why-list">
+                                            <li>
+                                                <strong>검증된 정보가 없다</strong>
+                                                <span>반려동물 정보는 넘쳐나지만 출처와 신뢰도는 천차만별입니다. 잘못된 정보는 반려동물의 건강을 직접 위협할 수 있어, 수의사와 전문가가 직접 답하는 Q&A가 필요합니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>혼자 감당하기 어렵다</strong>
+                                                <span>초보 보호자부터 노령 동물을 돌보는 경험자까지, 반려생활의 고민은 끊이지 않습니다. 같은 상황을 먼저 겪은 이들의 경험과 공감이 담긴 커뮤니티는 든든한 버팀목이 됩니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>믿고 살 수 있는 곳이 없다</strong>
+                                                <span>시장이 커질수록 품질 미달 제품과 과장 광고도 늘어납니다. 전문가가 검토한 제품만을 엄선한 큐레이션 쇼핑몰은 보호자가 안심하고 선택할 수 있는 환경을 제공합니다.</span>
+                                            </li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="platform-footer">
+                                        <p class="final-motto">반려생활의 모든 것, 한 곳에서</p>
+                                        <p class="final-sub">질문, 소통, 그리고 믿을 수 있는 쇼핑까지 — 반려동물과 보호자 모두를 위한 통합 플랫폼</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -1184,7 +1447,7 @@
             // Update panels
             document.querySelectorAll('.service-entry-panel').forEach((panel, index) => {
                 if (index === tabIndex - 1) {
-                    panel.style.display = 'flex';
+                    panel.style.display = panel.classList.contains('pet-platform-panel') ? 'block' : 'flex';
                 } else {
                     panel.style.display = 'none';
                 }
