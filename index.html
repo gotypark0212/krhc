@@ -1102,7 +1102,7 @@
                         <span>02</span> 비만케어 · Obesity Management
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(3)">
-                        <span>03</span> 서비스 셋
+                        <span>03</span> 고독사 예방 · Isolated Death Care
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(4)">
                         <span>04</span> 서비스 넷
@@ -1286,11 +1286,93 @@
                             </div>
                             
                             <!-- Service 3 Panel -->
-                            <div class="service-entry-panel" id="service-panel-3" style="display:none;">
-                                <div class="entry-index">03</div>
-                                <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="세 번째 핵심 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="세 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
+                            <div class="service-entry-panel isolated-death-panel" id="service-panel-3" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">고독사 예방 · Isolated Death Care</span>
+                                        <h3 class="platform-title">혼자 사는 것이 위험이 되어서는 안 됩니다</h3>
+                                        <p class="platform-lead">1인 가구와 고령 인구의 급증으로 고독사는 더 이상 특수한 사례가 아닙니다. 일상 속 조용한 위기를 사전에 감지하고, 연결과 돌봄의 손길이 닿는 시스템이 지금 필요합니다.</p>
+                                    </div>
+
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">750만</div>
+                                            <div class="stat-label">국내 1인 가구 수</div>
+                                            <div class="stat-desc">전체 가구의 약 34%, 지속 증가 중</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">3,378</div>
+                                            <div class="stat-label">연간 고독사 사망자 수</div>
+                                            <div class="stat-desc">2022년 기준, 매년 증가 추세</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5일</div>
+                                            <div class="stat-label">평균 사망 후 발견 소요 시간</div>
+                                            <div class="stat-desc">방치 기간이 길수록 존엄성 훼손</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">40%</div>
+                                            <div class="stat-label">위험군 중 50대 이상 비율</div>
+                                            <div class="stat-desc">고령층·중장년 남성 특히 취약</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">사회적 고립</span>
+                                            <h4>단절과 무연고 심화</h4>
+                                            <p>가족·이웃과의 관계가 단절되면 위급 상황에서 도움을 요청하거나 받을 연결망 자체가 사라집니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">늦은 발견</span>
+                                            <h4>사망 후 장기 방치</h4>
+                                            <p>수일~수주간 발견되지 않는 사례가 빈번하며, 개인의 존엄성 훼손과 사회적 충격으로 이어집니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">건강 공백</span>
+                                            <h4>만성질환 방치·응급 대응 불가</h4>
+                                            <p>정기적인 건강 모니터링 없이 낙상·심정지 등 응급 상황이 발생하면 골든타임을 놓칩니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">정신 건강</span>
+                                            <h4>우울·고립감·자살 위험</h4>
+                                            <p>만성적인 외로움은 우울증과 인지 저하를 가속화하며, 고령층의 자살 위험으로 이어지기도 합니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">실버케어 부재</span>
+                                            <h4>고령자 일상 안전 위협</h4>
+                                            <p>욕실·화장실 등 낙상 고위험 공간에서 사고가 발생해도 즉각 감지하고 대응할 수단이 없습니다.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">사회·경제</span>
+                                            <h4>사회적 비용 증가</h4>
+                                            <p>사후 처리·공공 복지·정신건강 치료 등 예방하지 못한 고독사는 사회 전체의 경제적 손실로 귀결됩니다.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="platform-why">
+                                        <h4>고독사 예방과 실버케어 서비스가 필요한 이유</h4>
+                                        <p class="why-intro">고독사는 일상의 단절에서 시작됩니다. 작은 신호를 먼저 감지하고, 위험 순간에 즉각 연결되는 시스템이 있다면 충분히 예방할 수 있습니다.</p>
+                                        <ol class="why-list">
+                                            <li>
+                                                <strong>일상 속 이상 신호를 먼저 감지해야 한다</strong>
+                                                <span>생활 패턴 변화, 움직임 감소, 화장실 미사용 등 작은 징후를 IoT 센서로 실시간 감지하면 위기 상황을 사전에 차단할 수 있습니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>낙상·응급 상황은 골든타임이 전부다</strong>
+                                                <span>욕실에서의 낙상은 혼자 발견되지 못하면 생명을 잃을 수 있습니다. Station·Toilet seat 등 생활 밀착형 스마트 디바이스가 이상을 감지해 보호자와 응급 서비스에 자동 연결합니다.</span>
+                                            </li>
+                                            <li>
+                                                <strong>연결과 돌봄이 예방의 핵심이다</strong>
+                                                <span>기술적 감지와 함께 정기 안부 확인, 지역사회 연계, 심리 지원을 통해 고립된 1인 가구가 사회 안에서 안전하게 생활할 수 있도록 지속 지원합니다.</span>
+                                            </li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="platform-footer">
+                                        <p class="final-motto">혼자여도 안전하고, 고령이어도 존엄하게</p>
+                                        <p class="final-sub">일상 밀착형 스마트 케어로 고독사 없는 사회를 만들어 갑니다</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -1584,7 +1666,7 @@
             // Update panels
             document.querySelectorAll('.service-entry-panel').forEach((panel, index) => {
                 if (index === tabIndex - 1) {
-                    panel.style.display = (panel.classList.contains('pet-platform-panel') || panel.classList.contains('obesity-platform-panel')) ? 'block' : 'flex';
+                    panel.style.display = (panel.classList.contains('pet-platform-panel') || panel.classList.contains('obesity-platform-panel') || panel.classList.contains('isolated-death-panel')) ? 'block' : 'flex';
                 } else {
                     panel.style.display = 'none';
                 }
