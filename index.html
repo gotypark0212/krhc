@@ -337,29 +337,53 @@
             position: relative;
             filter: drop-shadow(0 15px 30px rgba(0,0,0,0.06));
         }
+        .folder-tabs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding-left: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
         .folder-tab {
             display: inline-flex;
             align-items: center;
+            background-color: #074b3b;
+            color: rgba(255,255,255,0.7);
+            padding: 0.8rem 2rem;
+            border-radius: 12px 12px 0 0;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: -1px;
+            box-shadow: inset 0 -4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .folder-tab:hover {
+            color: var(--white);
+            background-color: #0a5f4b;
+        }
+        .folder-tab.active {
             background-color: var(--primary);
             color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 16px 16px 0 0;
-            font-family: var(--font-display);
-            font-size: 1.1rem;
+            box-shadow: inset 0 -4px 10px rgba(0,0,0,0.05);
             font-weight: 700;
-            position: relative;
-            z-index: 2;
-            margin-bottom: -1px;
-            box-shadow: inset 0 -4px 10px rgba(0,0,0,0.1);
+            z-index: 3;
+            transform: translateY(-2px);
+            padding: 1rem 2.5rem;
         }
-        .folder-tab i {
+        .folder-tab span {
+            opacity: 0.5;
             margin-right: 0.5rem;
-            color: var(--accent);
-            font-size: 1.2rem;
+            font-family: var(--font-display);
+            font-weight: 800;
         }
         .folder-body {
             background: linear-gradient(135deg, var(--primary), #074b3b);
-            border-radius: 0 16px 16px 16px;
+            border-radius: 16px;
             padding: 1.5rem;
             position: relative;
             z-index: 1;
@@ -370,6 +394,7 @@
             padding: 3rem 2rem;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
             position: relative;
+            min-height: 400px; /* maintain consistent height when switching panels */
         }
         .folder-paper::before {
             content: '';
@@ -385,14 +410,16 @@
             position: relative;
             z-index: 2;
         }
-        .service-entry-row {
+        .service-entry-panel {
             display: flex;
             gap: 1.5rem;
             margin-bottom: 2rem;
             position: relative;
+            animation: fadeIn 0.4s ease forwards;
         }
-        .service-entry-row:last-child {
-            margin-bottom: 0;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .entry-index {
             font-family: var(--font-display);
@@ -819,47 +846,61 @@
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">새롭게 제공할 4개의 핵심 서비스를 등록해 주세요.</p>
             
             <div class="folder-ui-wrapper" data-aos="fade-up" data-aos-delay="200">
-                <div class="folder-tab">
-                    <i class="fa-regular fa-folder-open"></i> 서비스 등록 작성철
+                <div class="folder-tabs-container">
+                    <button class="folder-tab active" onclick="switchFolderTab(1)">
+                        <span>01</span> 서비스 하나
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(2)">
+                        <span>02</span> 서비스 둘
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(3)">
+                        <span>03</span> 서비스 셋
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(4)">
+                        <span>04</span> 서비스 넷
+                    </button>
                 </div>
                 <div class="folder-body">
                     <div class="folder-paper">
                         <form class="services-register-form">
-                            <!-- Service 1 -->
-                            <div class="service-entry-row">
+                            <!-- Service 1 Panel -->
+                            <div class="service-entry-panel" id="service-panel-1" style="display:flex;">
                                 <div class="entry-index">01</div>
                                 <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="첫 번째 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="상세 설명을 입력하세요..." rows="2"></textarea>
+                                    <input type="text" class="form-control" placeholder="첫 번째 핵심 서비스 명칭 (입력 공간)">
+                                    <textarea class="form-control" placeholder="첫 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
                                 </div>
                             </div>
-                            <!-- Service 2 -->
-                            <div class="service-entry-row">
+                            
+                            <!-- Service 2 Panel -->
+                            <div class="service-entry-panel" id="service-panel-2" style="display:none;">
                                 <div class="entry-index">02</div>
                                 <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="두 번째 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="상세 설명을 입력하세요..." rows="2"></textarea>
+                                    <input type="text" class="form-control" placeholder="두 번째 핵심 서비스 명칭 (입력 공간)">
+                                    <textarea class="form-control" placeholder="두 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
                                 </div>
                             </div>
-                            <!-- Service 3 -->
-                            <div class="service-entry-row">
+                            
+                            <!-- Service 3 Panel -->
+                            <div class="service-entry-panel" id="service-panel-3" style="display:none;">
                                 <div class="entry-index">03</div>
                                 <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="세 번째 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="상세 설명을 입력하세요..." rows="2"></textarea>
+                                    <input type="text" class="form-control" placeholder="세 번째 핵심 서비스 명칭 (입력 공간)">
+                                    <textarea class="form-control" placeholder="세 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
                                 </div>
                             </div>
-                            <!-- Service 4 -->
-                            <div class="service-entry-row">
+                            
+                            <!-- Service 4 Panel -->
+                            <div class="service-entry-panel" id="service-panel-4" style="display:none;">
                                 <div class="entry-index">04</div>
                                 <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="네 번째 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="상세 설명을 입력하세요..." rows="2"></textarea>
+                                    <input type="text" class="form-control" placeholder="네 번째 핵심 서비스 명칭 (입력 공간)">
+                                    <textarea class="form-control" placeholder="네 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-actions text-center">
-                                <button type="button" class="btn btn-primary btn-register"><i class="fa-solid fa-save"></i> 4개 서비스 일괄 등록</button>
+                                <button type="button" class="btn btn-primary btn-register"><i class="fa-solid fa-save"></i> 저장하기</button>
                             </div>
                         </form>
                     </div>
@@ -1128,6 +1169,27 @@
                 if (errorEl) errorEl.style.display = 'none';
             });
         });
+
+        // Folder Tab Switcher
+        window.switchFolderTab = function(tabIndex) {
+            // Update tabs
+            document.querySelectorAll('.folder-tab').forEach((tab, index) => {
+                if (index === tabIndex - 1) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Update panels
+            document.querySelectorAll('.service-entry-panel').forEach((panel, index) => {
+                if (index === tabIndex - 1) {
+                    panel.style.display = 'flex';
+                } else {
+                    panel.style.display = 'none';
+                }
+            });
+        };
     </script>
 </body>
 </html>
