@@ -1104,7 +1104,7 @@
                         <span>03</span> 고독사 예방
                     </button>
                     <button class="folder-tab" onclick="switchFolderTab(4)">
-                        <span>04</span> 서비스 넷
+                        <span>04</span> 화장실 환경개선
                     </button>
                 </div>
                 <div class="folder-body">
@@ -1374,11 +1374,84 @@
                             </div>
                             
                             <!-- Service 4 Panel -->
-                            <div class="service-entry-panel" id="service-panel-4" style="display:none;">
-                                <div class="entry-index">04</div>
-                                <div class="entry-fields">
-                                    <input type="text" class="form-control" placeholder="네 번째 핵심 서비스 명칭 (입력 공간)">
-                                    <textarea class="form-control" placeholder="네 번째 서비스에 대한 상세 설명을 입력하세요..." rows="5"></textarea>
+                            <div class="service-entry-panel restroom-panel" id="service-panel-4" style="display:none;">
+                                <style>
+                                    .grid-2-custom { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+                                    .grid-3-custom { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+                                    @media (max-width: 768px) {
+                                        .grid-2-custom, .grid-3-custom { grid-template-columns: 1fr !important; }
+                                    }
+                                </style>
+                                <div class="obesity-care-content" style="width: 100%;">
+                                    <div class="platform-header">
+                                        <span class="platform-label" style="background-color: var(--primary-light); color: var(--primary);">화장실 환경개선</span>
+                                        <h3 class="platform-title">화장실 환경개선</h3>
+                                        <p class="platform-lead">화장실 보급을 넘어, 아이·여성·장애인 등 취약계층이 안전하고 편안하게<br>이용할 수 있는 화장실 환경 조성 솔루션을 제공합니다.</p>
+                                    </div>
+
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">35억+</div>
+                                            <div class="stat-label">기본 위생시설 미접근 인구</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">6.7억</div>
+                                            <div class="stat-label">야외 배변 인구 (2023)</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">44%</div>
+                                            <div class="stat-label">학교 내 성별 분리 화장실<br>미비 개도국 비율</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">2억+</div>
+                                            <div class="stat-label">화장실 부족으로 학업 중단하는<br>여학생 수(연간)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge" style="background-color: var(--primary-light); color: var(--primary);">여성·소녀</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">잠금장치·조명·전용 공간 확보, 생리용품 공급 및 처리 시스템, 야간 안전 동선 설계</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge" style="background-color: var(--primary-light); color: var(--primary);">아동</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">높이 조절형 세면대·변기, 미끄럼 방지 바닥, 픽토그램 기반 위생 교육 콘텐츠 제공</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge" style="background-color: var(--primary-light); color: var(--primary);">장애인·고령자</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">휠체어 진입 공간, 안전 손잡이, 점자·음성 안내, 응급 호출 시스템 구축</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge" style="background-color: var(--primary-light); color: var(--primary);">지역사회</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">위생 행동변화 교육(WASH), 지역 운영 위원회 구성, 유지보수 역량 강화 트레이닝</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="platform-why" style="background-color: transparent; border: none; padding: 0;">
+                                        <h4 style="text-align: center; color: var(--primary); margin-bottom: 2rem; font-size: 1.6rem;">화장실 이용 환경 개선이 필요한 이유</h4>
+                                        <div class="grid-3-custom">
+                                            <div class="problem-card" style="display: flex; flex-direction: column;">
+                                                <span class="p-badge" style="background-color: var(--primary); color: var(--white); align-self: flex-start; padding: 0.4rem 1rem; border-radius: 50px;">이유 01</span>
+                                                <strong style="margin: 1rem 0 0.5rem 0; color: var(--text-dark); display: block; font-size: 1.1rem;">건강과 생명을 위협하는 비위생 환경</strong>
+                                                <span style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">콜레라·장티푸스 등 수인성 질병의 주요 원인이며, 5세 미만 아동 사망과 직결됩니다. 야외 배변은 토양·수원을 오염시켜 지역사회 전체의 공중보건을 위협합니다.</span>
+                                            </div>
+                                            <div class="problem-card" style="display: flex; flex-direction: column;">
+                                                <span class="p-badge" style="background-color: var(--primary); color: var(--white); align-self: flex-start; padding: 0.4rem 1rem; border-radius: 50px;">이유 02</span>
+                                                <strong style="margin: 1rem 0 0.5rem 0; color: var(--text-dark); display: block; font-size: 1.1rem;">여성·아동의 안전과 교육 기회 박탈</strong>
+                                                <span style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">여성 전용 공간 부재는 성폭력 위험을 높이고, 생리 위생 시설 미비는 여학생의 반복적인 결석과 학업 포기로 이어집니다. 아동용 시설 부재는 안전사고 위험을 높입니다.</span>
+                                            </div>
+                                            <div class="problem-card" style="display: flex; flex-direction: column;">
+                                                <span class="p-badge" style="background-color: var(--primary); color: var(--white); align-self: flex-start; padding: 0.4rem 1rem; border-radius: 50px;">이유 03</span>
+                                                <strong style="margin: 1rem 0 0.5rem 0; color: var(--text-dark); display: block; font-size: 1.1rem;">공급 이후 방치되는 지속가능성 위기</strong>
+                                                <span style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">관리 주체 없이 시설만 공급되면 단기간 내 파손·오염으로 방치됩니다. 단발성 지원이 아닌 지역사회의 운영 역량과 지속가능성을 함께 설계하는 접근이 필요합니다.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="platform-footer" style="margin-top: 4rem;">
+                                        <p class="final-motto">건강하고 존엄한 삶을 지키는 가장 확실한 출발점</p>
+                                        <p class="final-sub">안전한 화장실이 지역사회 전체의 보건과 내일을 바꿉니다.</p>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -1663,7 +1736,7 @@
             // Update panels
             document.querySelectorAll('.service-entry-panel').forEach((panel, index) => {
                 if (index === tabIndex - 1) {
-                    panel.style.display = (panel.classList.contains('pet-platform-panel') || panel.classList.contains('obesity-platform-panel') || panel.classList.contains('isolated-death-panel')) ? 'block' : 'flex';
+                    panel.style.display = (panel.classList.contains('pet-platform-panel') || panel.classList.contains('obesity-platform-panel') || panel.classList.contains('isolated-death-panel') || panel.classList.contains('restroom-panel')) ? 'block' : 'flex';
                 } else {
                     panel.style.display = 'none';
                 }
