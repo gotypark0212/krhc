@@ -692,32 +692,6 @@
             box-shadow: 0 0 0 4px rgba(45, 184, 154, 0.1);
         }
 
-        /* 4. Partners */
-        .partners {
-            background-color: var(--bg-cream);
-            padding: 4rem 0;
-        }
-        .partners .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            align-items: center;
-            justify-items: center;
-            opacity: 0.6;
-        }
-        .partners-grid i {
-            font-size: 3rem;
-            color: var(--text-muted);
-            transition: all 0.3s;
-        }
-        .partners-grid i:hover {
-            color: var(--primary);
-            transform: scale(1.1);
-        }
         
         /* 5. Contact */
         .contact {
@@ -810,7 +784,7 @@
         }
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
         }
@@ -982,9 +956,7 @@
                 padding: 2rem 1.5rem;
             }
             
-            .partners-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -1013,7 +985,6 @@
         <div class="nav-links" id="nav-links">
             <a href="#about">Who We Are</a>
             <a href="#services">Services</a>
-            <a href="#partners">Partners</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -1456,20 +1427,6 @@
         </div>
     </section>
 
-    <!-- 4. PARTNERS -->
-    <section class="partners" id="partners">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">함께하는 파트너</h2>
-            <div class="partners-grid" data-aos="fade-up" data-aos-delay="200">
-                <i class="fa-brands fa-aws"></i>
-                <i class="fa-brands fa-apple"></i>
-                <i class="fa-solid fa-hospital"></i>
-                <i class="fa-brands fa-google"></i>
-                <i class="fa-solid fa-heart-circle-plus"></i>
-            </div>
-        </div>
-    </section>
-
     <!-- 5. CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1529,49 +1486,34 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div>
+                <div style="text-align: left;">
                     <a href="#" class="footer-logo">
                         <i class="fa-solid fa-heart-pulse"></i>
-                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; line-height: 1.1;">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
                             <span>한국헬스케어</span>
-                            <span style="font-size: 0.65rem; font-weight: 600; letter-spacing: 0.5px; opacity: 0.8; margin-top: 2px;">KOREA HEALTH CARE</span>
                         </div>
                     </a>
-                    <p class="footer-info">데이터 기반의 맞춤형 솔루션으로 모두의 건강한 내일을 만들어가는 혁신적인 헬스케어 플랫폼 기업입니다.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <div class="footer-info" style="margin-top: 1.5rem; line-height: 1.8; max-width: 100%;">
+                        사업자등록번호: 214-88-88888<br>
+                        통신판매업신고번호: 2021-서울??-00000<br>
+                        대표자. 박태양<br>
+                        주소. 14923 경기도 시흥시 은계중앙로 97 (은행동)<br>
+                        이메일. admin@krhc.com
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="footer-title">메뉴</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">기업 소개</a></li>
-                        <li><a href="#services">서비스 안내</a></li>
-                        <li><a href="#partners">파트너십</a></li>
-                        <li><a href="#contact">문의하기</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="footer-title">법적 고지</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">환자 권리 장전</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="footer-title">뉴스레터 구독</h4>
-                    <p style="color: #9CA3AF; font-size: 0.9rem;">최신 헬스케어 트렌드와 한국헬스케어의 소식을 메일로 받아보세요.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('구독이 완료되었습니다.');">
-                        <input type="email" placeholder="이메일 주소" required>
-                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
+                <div style="text-align: right;">
+                    <div style="font-weight: 700; color: var(--white); margin-bottom: 0.5rem; font-size: 1.05rem;">&lt;BANK INFO&gt;</div>
+                    <div class="footer-info" style="line-height: 1.8; margin-bottom: 1.5rem; max-width: 100%;">
+                        예금주 ㈜에스에스엘케이에이치<br>
+                        국민 946501-01-339323
+                    </div>
+                    
+                    <div style="font-weight: 700; color: var(--white); margin-bottom: 0.5rem; font-size: 1.05rem;">&lt;구매안전 서비스&gt;</div>
+                    <div class="footer-info" style="line-height: 1.6; max-width: 100%;">
+                        고객님은 안전거래를 위해 현금 등으로 5만원이하 소액거래(전체거래)결제시<br>저희 쇼핑몰이 가입한 PG 에스크로 구매안전 서비스를 이용하실 수 있습니다.<br>
+                        결제대금예치업 등록번호 02-006-00003 <a href="#" style="text-decoration: underline; color: #9CA3AF;">가입사실확인</a>
+                    </div>
                 </div>
             </div>
             
