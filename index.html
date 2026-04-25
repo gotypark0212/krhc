@@ -207,7 +207,7 @@
             display: flex;
             align-items: center;
             background: linear-gradient(rgba(10, 107, 85, 0.85), rgba(10, 107, 85, 0.7)), 
-                        url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+                        url('hero_bg.jpg') center/cover no-repeat;
             color: var(--white);
             text-align: center;
             padding: 0 5%;
@@ -994,6 +994,7 @@
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>삶의 모든 순간에<br>더 나은 K-웰니스를</h1>
             <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                <br><br><br>
                 현대인은 저마다의 방식으로 조용히 지쳐갑니다.<br>
                 하지만 일상에서 발생하는 모든 문제들을 병원에 기댈 수는 없습니다.<br><br><br>
             </p>
@@ -1405,54 +1406,8 @@
     <!-- 5. CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-container" data-aos="fade-up">
-                <div class="contact-info">
-                    <h2>상담 및 파트너십 문의</h2>
-                    <p>한국헬스케어 솔루션 도입이나 제휴에 관해 궁금한 점이 있으시다면 언제든 문의해 주세요. 담당자가 빠른 시일 내에 연락드리겠습니다.</p>
-                    
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>02-1234-5678</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>hello@caresync.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>서울시 강남구 테헤란로 123 한국헬스케어 빌딩 8층</span>
-                    </div>
-                </div>
-                
-                <div class="contact-form-wrap">
-                    <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label class="form-label" for="name">이름 (소속기관)</label>
-                            <input type="text" id="name" class="form-control" placeholder="홍길동 (AA병원)">
-                            <div class="error-msg" id="nameError">이름을 입력해주세요.</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="email">이메일 주소</label>
-                            <input type="email" id="email" class="form-control" placeholder="example@domain.com">
-                            <div class="error-msg" id="emailError">유효한 이메일 주소를 입력해주세요.</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="phone">연락처</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="010-0000-0000">
-                            <div class="error-msg" id="phoneError">연락처를 입력해주세요.</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="message">문의 내용</label>
-                            <textarea id="message" class="form-control" placeholder="문의하실 내용을 상세히 적어주세요."></textarea>
-                            <div class="error-msg" id="messageError">문의 내용을 입력해주세요.</div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">문의 접수하기</button>
-                    </form>
-                </div>
+            <div data-aos="fade-up" style="text-align: center;">
+                <img src="contact_image.jpg" alt="KoreaHealthcare Building" style="width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); object-fit: cover;">
             </div>
         </div>
     </section>
@@ -1586,63 +1541,9 @@
             observer.observe(counterSection);
         }
 
-        // Form Validation
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-            
-            const fields = [
-                { id: 'name', type: 'text', errorId: 'nameError' },
-                { id: 'email', type: 'email', errorId: 'emailError' },
-                { id: 'phone', type: 'text', errorId: 'phoneError' },
-                { id: 'message', type: 'text', errorId: 'messageError' }
-            ];
-            
-            fields.forEach(field => {
-                const input = document.getElementById(field.id);
-                const error = document.getElementById(field.errorId);
-                
-                if (input.value.trim() === '') {
-                    input.classList.add('error');
-                    error.style.display = 'block';
-                    isValid = false;
-                } else if (field.type === 'email' && !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(input.value)) {
-                    input.classList.add('error');
-                    error.style.display = 'block';
-                    isValid = false;
-                } else {
-                    input.classList.remove('error');
-                    error.style.display = 'none';
-                }
-            });
-            
-            if (isValid) {
-                // Mock form submission
-                const btn = contactForm.querySelector('button');
-                const originalText = btn.innerText;
-                btn.innerText = '전송 중...';
-                btn.disabled = true;
-                
-                setTimeout(() => {
-                    alert('성공적으로 접수되었습니다. 곧 연락드리겠습니다.');
-                    contactForm.reset();
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                }, 1000);
-            }
-        });
+        // Form validation removed as form was replaced by image
 
-        // Remove error styling on input
-        document.querySelectorAll('.form-control').forEach(input => {
-            input.addEventListener('input', function() {
-                this.classList.remove('error');
-                const errorId = this.id + 'Error';
-                const errorEl = document.getElementById(errorId);
-                if (errorEl) errorEl.style.display = 'none';
-            });
-        });
+
 
         // Folder Tab Switcher
         window.switchFolderTab = function(tabIndex) {
