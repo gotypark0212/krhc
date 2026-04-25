@@ -614,6 +614,17 @@
             gap: 1.5rem;
             margin-bottom: 4rem;
         }
+        .grid-2-custom { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 1.5rem; 
+            margin-bottom: 4rem; 
+        }
+        .grid-3-custom { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 1.5rem; 
+        }
         .problem-card {
             background-color: var(--white);
             border: 1px solid #E5E7EB;
@@ -880,15 +891,15 @@
         }
 
         @media (max-width: 992px) {
-            .who-we-are .container {
-                grid-template-columns: 1fr;
-            }
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .who-we-are .container { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            
+            /* Tablet layout for grids */
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .platform-stats.grid-4, .platform-stats.grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .problem-cards.grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-2-custom, .grid-3-custom { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -936,16 +947,10 @@
                 width: 2.5rem;
                 font-size: 1.5rem;
             }
-            .platform-stats.grid-3 {
+            .platform-stats.grid-3, .platform-stats.grid-4 {
                 grid-template-columns: 1fr;
             }
-            .platform-stats.grid-4 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .platform-benefits.grid-2 {
-                grid-template-columns: 1fr;
-            }
-            .problem-cards.grid-3 {
+            .platform-benefits.grid-2, .problem-cards.grid-3, .grid-2-custom, .grid-3-custom {
                 grid-template-columns: 1fr;
             }
             .platform-title {
@@ -1327,13 +1332,6 @@
                             
                             <!-- Service 4 Panel -->
                             <div class="service-entry-panel restroom-panel" id="service-panel-4" style="display:none;">
-                                <style>
-                                    .grid-2-custom { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
-                                    .grid-3-custom { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-                                    @media (max-width: 768px) {
-                                        .grid-2-custom, .grid-3-custom { grid-template-columns: 1fr !important; }
-                                    }
-                                </style>
                                 <div class="obesity-care-content" style="width: 100%;">
                                     <div class="platform-header">
                                         <span class="platform-label" style="background-color: var(--primary-light); color: var(--primary);">화장실 환경개선</span>
