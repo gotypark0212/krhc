@@ -132,6 +132,32 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 1.5rem;
+        }
+        .lang-selector a {
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .lang-selector a:hover {
+            opacity: 0.8;
+        }
+        .lang-selector a.active {
+            opacity: 1;
+            color: var(--accent);
+        }
+        .lang-selector a::after {
+            display: none; /* No underline for lang selector */
+        }
+        .navbar.scrolled .lang-selector {
+            color: var(--text-dark);
+        }
         .menu-toggle {
             display: none;
             color: var(--white);

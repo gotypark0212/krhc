@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Healthcare | Innovative Healthcare Solutions</title>
+    <meta name="description" content="Creating a healthier life with data and technology.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Korea Healthcare Logo" style="height: 44px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                <span>Korea Healthcare</span>
+                <span style="font-size: 0.65rem; font-weight: 600; letter-spacing: 1.6px; opacity: 0.8; margin-top: 2px;">KOREA HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">MISSIONS</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <div class="lang-selector">
+                <a href="index.html">KOR</a> | <a href="index_en.html" class="active">ENG</a>
+            </div>
+        </div>
+    </nav>
+    <!-- 1. HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Better K-Wellness<br>in Every Moment of Life</h1>
+            <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.4rem; font-weight: 500;">
+                <br><br><br>
+                We quietly exhaust ourselves for our own reasons.<br>
+                But we cannot rely solely on doctors and hospitals for all our daily problems.<br><br><br>
+            </p>
+            <p style="line-height: 1.8; font-size: 1.8rem; font-weight: 500; margin-top: 2rem;">
+                Korea Healthcare contemplates a better life in people's daily routines.
+            </p>
+        </div>
+    </section>
+    <!-- 2. WHO WE ARE -->
+    <section class="who-we-are" id="about">
+        <div class="container">
+            <div class="who-text" data-aos="fade-up">
+                <h2 class="section-title" style="font-size: 2.1rem; line-height: 1.4;">While doctors and hospitals treat diseases,<br>protecting daily life before and after illness is different.</h2>
+                <p>Our lives continue far longer outside the hospital.</p>
+                <p>Health is an area of management that begins before going to the hospital and the moment you step out of it.<br>
+                Diet, sleep, stress, exercise—every moment of daily life comes together to form your health report card.<br>
+                This is why we cannot entrust all our health problems solely to doctors and hospitals.</p>
+                <p style="margin-top: 1rem; padding: 1rem; background-color: var(--primary-light); border-radius: 8px; border-left: 4px solid var(--accent); color: var(--text-dark);">
+                    <strong>Korea Healthcare focuses on the life before visiting a hospital and the life after discharge.</strong><br>
+                    We provide meticulous guidance in non-medical areas so that your daily life can become the best cure.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Parallax Divider -->
+    <div class="parallax-divider">
+        <div data-aos="zoom-in">
+            <h2>Adding Meticulousness and Technology.</h2>
+            <p>In people's daily lives and their diverse moments,<br>we create K-Wellness with added meticulousness and technology.</p>
+        </div>
+    </div>
+    <!-- 3. SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Core Services</h2>
+            <div class="folder-ui-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="folder-tabs-container">
+                    <button class="folder-tab active" onclick="switchFolderTab(1)">
+                        <span>01</span> Pet Life Platform
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(2)">
+                        <span>02</span> Obesity Care
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(3)">
+                        <span>03</span> Lonely Death Prevention
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(4)">
+                        <span>04</span> Restroom Improvement
+                    </button>
+                </div>
+                <div class="folder-body">
+                    <div class="folder-paper">
+                        <form class="services-register-form">
+                            <!-- Service 1 Panel -->
+                            <div class="service-entry-panel pet-platform-panel active" id="service-panel-1" style="display:block;">
+                                <div class="pet-platform-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">Pet Life Platform</span>
+                                        <h3 class="platform-title">A Healthier, Happier Life with Your Pet</h3>
+                                        <p class="platform-lead">Pets are more than just family members; they have a real impact on our physical and mental health.<br> With the right information, community, and reliable products, pet life becomes richer.</p>
+                                    </div>
+                                    <div class="platform-stats grid-3">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">15M+</div>
+                                            <div class="stat-label">Domestic Pet Households</div>
+                                            <div class="stat-desc">Over 25% of all households</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">30%↓</div>
+                                            <div class="stat-label">Cardiovascular Risk Reduction</div>
+                                            <div class="stat-desc">American Heart Association study</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5 Trillion+</div>
+                                            <div class="stat-label">Domestic Pet Market Size</div>
+                                            <div class="stat-desc">Expected to exceed 6 Trillion KRW by 2027</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">Physical Health</span>
+                                            <h4>Cardiovascular Health Improvement</h4>
+                                            <p>Regular walks and activities stabilize blood pressure and cholesterol, significantly lowering the risk of heart disease.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">Mental Health</span>
+                                            <h4>Stress and Anxiety Relief</h4>
+                                            <p>Interacting with pets lowers stress hormones and promotes happiness hormones, helping emotional stability.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">Social Connection</span>
+                                            <h4>Social Connection and Relieving Loneliness</h4>
+                                            <p>Pets naturally lead to human interaction, reducing isolation and increasing a sense of belonging.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">Lifestyle</span>
+                                            <h4>Routine and Sense of Purpose</h4>
+                                            <p>The daily repetition of care creates a regular rhythm of life, fostering a sense of purpose and self-efficacy.</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>Why is a Professional Platform Needed?</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>Lack of Verified Information</strong>
+                                                    <span>There is a lot of pet information, but sources and reliability vary greatly. Incorrect information can directly threaten your pet's health, making expert Q&As necessary.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Hard to Handle Alone</strong>
+                                                    <span>From beginner owners to experienced ones caring for senior pets, worries never end. A community of people who have gone through the same situations is a strong support.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>No Reliable Places to Buy</strong>
+                                                    <span>As the market grows, substandard products and exaggerated ads increase. A curated shopping mall with expert-reviewed products provides a safe environment for owners.</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">Everything about pet life, in one place</p>
+                                            <p class="final-sub">Questions, communication, and reliable shopping — an integrated platform for both pets and owners</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 2 Panel -->
+                            <div class="service-entry-panel obesity-platform-panel" id="service-panel-2" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">Obesity Care</span>
+                                        <h3 class="platform-title">Obesity is not just a weight issue</h3>
+                                        <p class="platform-lead">Obesity is a complex health crisis that threatens overall life, including sleep disorders, cardiovascular disease, diabetes, and mental health issues. Fundamental change begins only when both core factors—sleep and weight—are managed together.</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">38%</div>
+                                            <div class="stat-label">Domestic Adult Obesity Rate</div>
+                                            <div class="stat-desc">As of 2023, steadily increasing</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">2x</div>
+                                            <div class="stat-label">Risk of sleep apnea in obese individuals</div>
+                                            <div class="stat-desc">Compared to normal weight</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5x</div>
+                                            <div class="stat-label">Increased risk of diabetes</div>
+                                            <div class="stat-desc">Cardiovascular disease risk also rises</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">11 Trillion</div>
+                                            <div class="stat-label">Socio-economic losses related to obesity</div>
+                                            <div class="stat-desc">Estimated annual domestic cost (KRW)</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">Physical Disease</span>
+                                            <h4>Cardiovascular and Metabolic Diseases</h4>
+                                            <p>It is a key risk factor for chronic metabolic diseases such as hypertension, dyslipidemia, type 2 diabetes, and fatty liver.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">Sleep Disorders</span>
+                                            <h4>Sleep Apnea and Insomnia</h4>
+                                            <p>Increased body fat narrows the airway, worsening sleep apnea, and poor sleep quality exacerbates obesity, creating a vicious cycle.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">Musculoskeletal System</span>
+                                            <h4>Joint and Spine Diseases</h4>
+                                            <p>Excessive weight places constant strain on the knees, hips, and spine, causing degenerative arthritis and chronic pain.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">Mental Health</span>
+                                            <h4>Depression, Anxiety, and Low Self-Esteem</h4>
+                                            <p>Social prejudice about body shape and hormonal imbalances increase the risk of depression and anxiety disorders, lowering the quality of life.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">Respiratory System</span>
+                                            <h4>Decreased Lung Function</h4>
+                                            <p>Abdominal fat compresses the diaphragm, reducing lung capacity and increasing shortness of breath and fatigue during exercise.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">Socio-economic</span>
+                                            <h4>Decreased Productivity and Increased Medical Costs</h4>
+                                            <p>Chronic fatigue and frequent illnesses lower work ability and lead to huge medical costs in the long run.</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>Why Sleep Improvement and Weight Management are Needed</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>Lack of Sleep Causes Obesity</strong>
+                                                    <span>A lack of sleep decreases appetite-suppressing hormones and increases appetite-stimulating hormones, leading to overeating. Basal metabolic rate also drops, so without solving sleep problems, the effect of weight loss through diet control is halved.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Obesity Ruins Sleep Again</strong>
+                                                    <span>As body fat accumulates, the airway narrows, worsening sleep apnea. Inability to sleep deeply repeats fatigue, decreased activity, and overeating. Obesity and sleep disorders exacerbate each other in a vicious cycle.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Data and Consistency are Key to Weight Loss</strong>
+                                                    <span>Reckless diets cause repeated muscle loss and yo-yo effects. Healthy weight loss and long-term maintenance are possible when diet, exercise, and sleep are managed integrally based on individual body data.</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">Fix your sleep, your weight will change. Change your weight, your life will change</p>
+                                            <p class="final-sub">Design a healthier daily life with data-driven obesity care</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 3 Panel -->
+                            <div class="service-entry-panel isolated-death-panel" id="service-panel-3" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">Lonely Death Prevention</span>
+                                        <h3 class="platform-title">Living Alone Should Not Be a Risk</h3>
+                                        <p class="platform-lead">With the rapid increase of single-person households and the elderly population, lonely death is no longer a special case. A system that detects silent crises in daily life in advance and provides connection and care is needed now.</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">7.5M</div>
+                                            <div class="stat-label">Domestic Single-Person Households</div>
+                                            <div class="stat-desc">About 34% of all households, continuously increasing</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">3,378</div>
+                                            <div class="stat-label">Annual Lonely Deaths</div>
+                                            <div class="stat-desc">As of 2022, increasing trend every year</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5 Days</div>
+                                            <div class="stat-label">Avg. time to discovery after death</div>
+                                            <div class="stat-desc">Longer neglect damages dignity</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">40%</div>
+                                            <div class="stat-label">Ratio of over 50s in risk groups</div>
+                                            <div class="stat-desc">Elderly and middle-aged men are especially vulnerable</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">Social Isolation</span>
+                                            <h4>Deepening Disconnection and Lack of Ties</h4>
+                                            <p>When relationships with family and neighbors are cut off, the network to request or receive help in emergencies disappears.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">Late Discovery</span>
+                                            <h4>Long-term neglect after death</h4>
+                                            <p>Cases of not being discovered for days to weeks are frequent, leading to damaged dignity and social shock.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">Health Gap</span>
+                                            <h4>Neglect of chronic diseases, inability to respond to emergencies</h4>
+                                            <p>Without regular health monitoring, golden time is missed in emergencies such as falls or cardiac arrest.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">Mental Health</span>
+                                            <h4>Depression, Isolation, Suicide Risk</h4>
+                                            <p>Chronic loneliness accelerates depression and cognitive decline, sometimes leading to suicide risk among the elderly.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">Absence of Silver Care</span>
+                                            <h4>Threat to daily safety of the elderly</h4>
+                                            <p>Even if accidents occur in high-risk fall areas like bathrooms or restrooms, there is no means for immediate detection and response.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">Socio-economic</span>
+                                            <h4>Increased Social Costs</h4>
+                                            <p>Post-mortem processing, public welfare, mental health treatment—unprevented lonely deaths result in economic loss for society as a whole.</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>Why Lonely Death Prevention and Silver Care Services are Needed</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>Abnormal signals in daily life must be detected first</strong>
+                                                    <span>Detecting small signs like changes in lifestyle patterns, decreased movement, or not using the restroom in real-time with IoT sensors can prevent crises.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>In falls and emergencies, golden time is everything</strong>
+                                                    <span>A fall in the bathroom can be fatal if not discovered alone. Smart devices close to daily life like Station and Toilet seats detect anomalies and automatically connect to guardians and emergency services.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Connection and Care are the Core of Prevention</strong>
+                                                    <span>기술적 감지와 함께 정기 안부 확인, Community 연계, 심리 지원을 통해 고립된 1인 가구가 사회 안에서 안전하게 생활할 수 있도록 지속 지원합니다.</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">Safe even if alone, dignified even if old</p>
+                                            <p class="final-sub">Creating a society without lonely deaths through daily smart care</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 4 Panel -->
+                            <div class="service-entry-panel restroom-panel" id="service-panel-4" style="display:none;">
+                                <div class="obesity-care-content" style="width: 100%;">
+                                    <div class="platform-header">
+                                        <span class="platform-label" style="background-color: var(--primary-light); color: var(--primary);">Restroom Improvement</span>
+                                        <h3 class="platform-title">Restroom Improvement</h3>
+                                        <p class="platform-lead">Beyond providing restrooms, we offer solutions to create a safe and comfortable restroom environment for vulnerable groups such as children, women, and the disabled.</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">3.5B+</div>
+                                            <div class="stat-label">Population lacking basic sanitation</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">670M</div>
+                                            <div class="stat-label">Open defecation population (2023)</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">44%</div>
+                                            <div class="stat-label">Developing countries lacking gender-separated restrooms in schools</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">200M+</div>
+                                            <div class="stat-label">Annual number of female students dropping out due to lack of restrooms</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">Women and Girls</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">Secure locks, lighting, dedicated spaces, menstrual product supply and disposal systems, safe night-time pathways</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">Children</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">Height-adjustable sinks/toilets, non-slip floors, pictogram-based hygiene education content</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">Disabled and Elderly</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">Wheelchair access space, safety handles, Braille/voice guidance, emergency call systems</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">Community</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">WASH hygiene behavior change education, forming local operation committees, maintenance capacity building training</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>Why Restroom Environment Improvement is Needed</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>Unhygienic Environments Threaten Health and Life</strong>
+                                                    <span>콜레라·장티푸스 등 수인성 질병의 주요 원인이며, 5세 미만 Children 사망과 직결됩니다. 야외 배변은 토양·수원을 오염시켜 Community 전체의 공중보건을 위협합니다.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Deprivation of Safety and Educational Opportunities for Women and Children</strong>
+                                                    <span>여성 전용 공간 부재는 성폭력 위험을 높이고, 생리 위생 시설 미비는 여학생의 반복적인 결석과 학업 포기로 이어집니다. Children용 시설 부재는 안전사고 위험을 높입니다.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>Sustainability Crisis Left Unattended After Supply</strong>
+                                                    <span>관리 주체 없이 시설만 공급되면 단기간 내 파손·오염으로 방치됩니다. 단발성 지원이 아닌 Community의 운영 역량과 지속가능성을 함께 설계하는 접근이 필요합니다.</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">The surest starting point for protecting a healthy and dignified life</p>
+                                            <p class="final-sub">안전한 화장실이 Community 전체의 보건과 내일을 바꿉니다.</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5. CONTACT -->
+    <section class="contact" id="contact" style="padding: 0;">
+        <div data-aos="fade-up" style="width: 100%;">
+            <img src="new_contact_image.jpg" alt="KoreaHealthcare Building" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+    </section>
+    <!-- 6. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div style="text-align: left;">
+                    <a href="#" class="footer-logo">
+                        <img src="logo.png" alt="Korea Healthcare Logo" style="height: 38px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                            <span>Korea Healthcare</span>
+                        </div>
+                    </a>
+                    <div class="footer-info" style="margin-top: 1.5rem; line-height: 1.8; max-width: 100%;">
+                        Business Reg No: 214-88-88888<br>
+                        E-commerce Reg No: 2021-Seoul-00000<br><br>
+                        CEO. Taeyang Park<br>
+                        Email. admin@krhc.com<br>
+                        Address. 97 Eungyejungang-ro, Siheung-si, Gyeonggi-do (14923)
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: 700; color: var(--white); margin-bottom: 0.5rem; font-size: 1.05rem;">&lt;BANK INFO&gt;</div>
+                    <div class="footer-info" style="line-height: 1.8; margin-bottom: 1.5rem; max-width: 100%;">
+                        Kookmin Bank 946501-01-339323 Korea Healthcare
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; align-items: flex-end; gap: 0.8rem;">
+                        <a href="#" style="color: var(--white); font-weight: 500;">Terms of Service</a>
+                        <a href="#" style="color: var(--white); font-weight: 500;">Privacy Policy</a>
+                        <a href="#" style="color: var(--white); font-weight: 500;">Business Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; 2026 Korea Healthcare. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
