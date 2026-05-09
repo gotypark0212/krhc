@@ -111,3 +111,20 @@
                 }
             });
         };
+// TOS Modal Logic
+const tosModal = document.getElementById('tosModal');
+
+window.openTosModal = function(e) {
+    if (e) e.preventDefault();
+    if (tosModal) tosModal.style.display = 'block';
+};
+
+window.closeTosModal = function() {
+    if (tosModal) tosModal.style.display = 'none';
+};
+
+window.addEventListener('click', (e) => {
+    if (e.target === tosModal) {
+        window.closeTosModal();
+    }
+});
