@@ -111,8 +111,10 @@
                 }
             });
         };
-// TOS Modal Logic
+// Modal Logic for TOS, Privacy, and Guide
 const tosModal = document.getElementById('tosModal');
+const privacyModal = document.getElementById('privacyModal');
+const guideModal = document.getElementById('guideModal');
 
 window.openTosModal = function(e) {
     if (e) e.preventDefault();
@@ -123,8 +125,32 @@ window.closeTosModal = function() {
     if (tosModal) tosModal.style.display = 'none';
 };
 
+window.openPrivacyModal = function(e) {
+    if (e) e.preventDefault();
+    if (privacyModal) privacyModal.style.display = 'block';
+};
+
+window.closePrivacyModal = function() {
+    if (privacyModal) privacyModal.style.display = 'none';
+};
+
+window.openGuideModal = function(e) {
+    if (e) e.preventDefault();
+    if (guideModal) guideModal.style.display = 'block';
+};
+
+window.closeGuideModal = function() {
+    if (guideModal) guideModal.style.display = 'none';
+};
+
 window.addEventListener('click', (e) => {
     if (e.target === tosModal) {
         window.closeTosModal();
+    }
+    if (privacyModal && e.target === privacyModal) {
+        window.closePrivacyModal();
+    }
+    if (guideModal && e.target === guideModal) {
+        window.closeGuideModal();
     }
 });
