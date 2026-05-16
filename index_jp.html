@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韓国ヘルスケア | より良いK-ウェルネスを</title>
+    <meta name="description" content="データと技術で、より健康な暮らしを創ります。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_v2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="韓国ヘルスケア ロゴ" style="height: 44px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                <span>Korea Healthcare</span>
+            </div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">MISSIONS</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <div class="lang-selector dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-globe"></i> JPN</button>
+                <div class="dropdown-content">
+                    <a href="index.html">KOR</a>
+                    <a href="index_en.html">ENG</a>
+                    <a href="index_jp.html" class="active">JPN</a>
+                    <a href="#" class="disabled" title="準備中">CHN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 1. HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>人生のすべての瞬間に<br>より良いK-ウェルネスを</h1>
+            <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.3rem; font-weight: 500;">
+                <br><br><br>
+                私たちはそれぞれの理由で、静かに疲れ果てていきます。<br>
+                しかし、日常のすべての問題を医師や病院に頼ることはできません。<br><br><br>
+            </p>
+            <p style="line-height: 1.8; font-size: 1.8rem; font-weight: 500; margin-top: 2rem;">
+                韓国ヘルスケアは、人々の日常におけるより良い暮らしを追求します。
+            </p>
+        </div>
+    </section>
+    <!-- 2. WHO WE ARE -->
+    <section class="who-we-are" id="about">
+        <div class="container">
+            <div class="who-text" data-aos="fade-up">
+                <h2 class="section-title" style="font-size: 2.1rem; line-height: 1.4;">医師や病院は病気を治療します。<br>しかし、病気の前後の日常を守ることは全く別のことです。</h2>
+                <p>私たちの人生は、病院の外でずっと長く続きます。</p>
+                <p>健康とは、病院に行く前から、そして病院を出た瞬間から始まる管理の領域です。<br>
+                食事、睡眠、ストレス、運動など、日常のすべての瞬間が合わさってあなたの健康の成績表となります。<br>
+                だからこそ、すべての健康問題を医師や病院だけに任せることはできないのです。</p>
+                <p style="margin-top: 1rem; padding: 1rem; background-color: var(--primary-light); border-radius: 8px; border-left: 4px solid var(--accent); color: var(--text-dark);">
+                    <strong>韓国ヘルスケアは、病院に行く前の暮らしと退院後の暮らしに焦点を当てています。</strong><br>
+                    あなたの日常が最高の治療法となるよう、非医療分野においてきめ細やかなソリューションを提供します。
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Parallax Divider -->
+    <div class="parallax-divider">
+        <div data-aos="zoom-in">
+            <h2>きめ細やかさと技術を加える。</h2>
+            <p>人々の日常生活や様々な瞬間において、<br>私たちはきめ細やかさと技術を加えたK-ウェルネスを創造します。</p>
+        </div>
+    </div>
+    <!-- 3. SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">コアサービス</h2>
+            <div class="folder-ui-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="folder-tabs-container">
+                    <button class="folder-tab active" onclick="switchFolderTab(1)">
+                        <span>01</span> ペットライフプラットフォーム
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(2)">
+                        <span>02</span> 肥満ケア
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(3)">
+                        <span>03</span> 孤独死予防
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(4)">
+                        <span>04</span> トイレ環境改善
+                    </button>
+                </div>
+                <div class="folder-body">
+                    <div class="folder-paper">
+                        <form class="services-register-form">
+                            <!-- Service 1 Panel -->
+                            <div class="service-entry-panel pet-platform-panel active" id="service-panel-1" style="display:block;">
+                                <div class="pet-platform-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">ペットライフプラットフォーム</span>
+                                        <h3 class="platform-title">ペットと共により健康で幸せな暮らし</h3>
+                                        <p class="platform-lead">ペットは単なる家族の一員ではありません。私たちの心身の健康に実質的な影響を与えます。<br> 正しい情報、コミュニティ、そして信頼できる製品があれば、ペットライフはさらに豊かになります。</p>
+                                    </div>
+                                    <div class="platform-stats grid-3">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">1,500万+</div>
+                                            <div class="stat-label">国内ペット飼育世帯</div>
+                                            <div class="stat-desc">全世帯の25%以上</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">30%↓</div>
+                                            <div class="stat-label">心血管疾患のリスク低減</div>
+                                            <div class="stat-desc">米国心臓協会研究</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5兆+</div>
+                                            <div class="stat-label">国内ペット市場規模</div>
+                                            <div class="stat-desc">2027年までに6兆ウォン突破予想</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">身体的健康</span>
+                                            <h4>心血管の健康改善</h4>
+                                            <p>定期的な散歩や活動は血圧やコレステロールを安定させ、心臓病のリスクを大幅に低下させます。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">メンタルヘルス</span>
+                                            <h4>ストレスと不安の緩和</h4>
+                                            <p>ペットとのふれあいはストレスホルモンを低下させ、幸福ホルモンの分泌を促し、感情の安定を助けます。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">社会的繋がり</span>
+                                            <h4>孤立感の解消と交流</h4>
+                                            <p>ペットを通じて自然と人との交流が生まれ、孤立感が減少し、帰属意識が高まります。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">ライフスタイル</span>
+                                            <h4>ルーティンと目的意識</h4>
+                                            <p>毎日のケアの繰り返しが生活の規則正しいリズムを作り、目的意識と自己効力感を育みます。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>なぜ専門的なプラットフォームが必要なのか？</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>検証された情報の不足</strong>
+                                                    <span>情報は溢れていますが、出所や信頼性はバラバラです。間違った情報はペットの健康を直接脅かすため、専門家によるQ&Aが必要です。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>一人で抱え込むことの困難さ</strong>
+                                                    <span>初めて飼う方からシニアペットを介護する経験者まで、悩みは尽きません。同じ状況を経験した人々のコミュニティは強い支えになります。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>安心して購入できる場所がない</strong>
+                                                    <span>市場の成長に伴い、粗悪品や誇大広告が増加しています。専門家が厳選した製品を扱うショッピングモールが安全な環境を提供します。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">ペットライフのすべてを、ここに</p>
+                                            <p class="final-sub">質問、コミュニケーション、そして信頼できるショッピング — ペットと飼い主のための統合プラットフォーム</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 2 Panel -->
+                            <div class="service-entry-panel obesity-platform-panel" id="service-panel-2" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">肥満ケア</span>
+                                        <h3 class="platform-title">肥満は単なる体重の問題ではありません</h3>
+                                        <p class="platform-lead">肥満は、睡眠障害、心血管疾患、糖尿病、精神疾患など、生活全体を脅かす複合的な健康危機です。睡眠と体重という2つの核心的要素を一緒に管理してこそ、根本的な変化が始まります。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">38%</div>
+                                            <div class="stat-label">国内成人肥満率</div>
+                                            <div class="stat-desc">2023年基準、持続的に増加中</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">2倍</div>
+                                            <div class="stat-label">睡眠時無呼吸症候群のリスク</div>
+                                            <div class="stat-desc">正常体重と比較して</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5倍</div>
+                                            <div class="stat-label">糖尿病の発生リスク</div>
+                                            <div class="stat-desc">心血管疾患のリスクも上昇</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">11兆</div>
+                                            <div class="stat-label">肥満による社会経済的損失</div>
+                                            <div class="stat-desc">国内年間推定費用 (ウォン)</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">身体的疾患</span>
+                                            <h4>心血管・代謝疾患</h4>
+                                            <p>高血圧、脂質異常症、2型糖尿病、脂肪肝などの慢性代謝疾患の主要な危険因子です。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">睡眠障害</span>
+                                            <h4>睡眠時無呼吸症と不眠症</h4>
+                                            <p>体脂肪の増加は気道を狭め、無呼吸症を悪化させ、睡眠の質の低下が再び肥満を促進する悪循環を生みます。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">筋骨格系</span>
+                                            <h4>関節・脊椎疾患</h4>
+                                            <p>過度な体重は膝、股関節、脊椎に持続的な負担をかけ、変形性関節症や慢性疼痛を引き起こします。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">メンタルヘルス</span>
+                                            <h4>うつ病、不安、自尊心の低下</h4>
+                                            <p>体型に対する社会的偏見やホルモンバランスの崩れにより、うつ病や不安障害のリスクが高まります。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">呼吸器系</span>
+                                            <h4>肺機能の低下</h4>
+                                            <p>腹部脂肪が横隔膜を圧迫し、肺活量が減少し、運動中の息切れや疲労感が増加します。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">社会経済</span>
+                                            <h4>生産性の低下と医療費の増加</h4>
+                                            <p>慢性疲労と頻繁な病気は業務能力を低下させ、長期的には莫大な医療費の支出に繋がります。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>なぜ睡眠改善と体重管理が必要なのか</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>睡眠不足が肥満を招く</strong>
+                                                    <span>睡眠が不足すると食欲抑制ホルモンが減少し、食欲増進ホルモンが増加し、過食に繋がります。基礎代謝量も落ちるため、睡眠問題を解決せずに食事制限をしても効果は半減します。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>肥満が再び睡眠を壊す</strong>
+                                                    <span>体脂肪が蓄積すると気道が狭くなり、睡眠時無呼吸症が悪化します。深く眠れないことで疲労が溜まり、活動量が低下し、再び過食に繋がるという悪循環が繰り返されます。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>データと継続性が減量の鍵</strong>
+                                                    <span>無理なダイエットは筋肉の損失とリバウンドを繰り返します。個人の生体データに基づいて、食事、運動、睡眠を統合的に管理してこそ、健康的な減量と長期的な維持が可能です。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">睡眠を整えれば体重が変わり、体重が変われば人生が変わる</p>
+                                            <p class="final-sub">データに基づく肥満ケアで、より健康な日常をデザインします</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 3 Panel -->
+                            <div class="service-entry-panel isolated-death-panel" id="service-panel-3" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">孤独死予防</span>
+                                        <h3 class="platform-title">一人暮らしがリスクになってはいけない</h3>
+                                        <p class="platform-lead">単身世帯と高齢者人口の急増により、孤独死はもはや特別なケースではありません。日常の静かな危機を事前に察知し、繋がりとケアを提供するシステムが今求められています。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">750万</div>
+                                            <div class="stat-label">国内の単身世帯</div>
+                                            <div class="stat-desc">全世帯の約34%、継続的に増加</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">3,378件</div>
+                                            <div class="stat-label">年間の孤独死</div>
+                                            <div class="stat-desc">2022年基準、毎年増加傾向</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5日</div>
+                                            <div class="stat-label">死亡から発見までの平均期間</div>
+                                            <div class="stat-desc">長期の放置は尊厳を傷つけます</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">40%</div>
+                                            <div class="stat-label">危険群の50代以上の割合</div>
+                                            <div class="stat-desc">高齢者や中高年の男性が特に脆弱</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">社会的孤立</span>
+                                            <h4>断絶と繋がり不足の深刻化</h4>
+                                            <p>家族や隣人との関係が途絶えると、緊急時に助けを求めるネットワークが消失します。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">発見の遅れ</span>
+                                            <h4>死後の長期放置</h4>
+                                            <p>数日から数週間発見されないケースが頻発しており、個人の尊厳が損なわれ、社会的ショックを与えています。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">健康格差</span>
+                                            <h4>慢性疾患の放置、緊急時の対応不能</h4>
+                                            <p>定期的な健康モニタリングがないため、転倒や心停止などの緊急時にゴールデンタイムを逃してしまいます。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">メンタルヘルス</span>
+                                            <h4>うつ病、孤立、自殺のリスク</h4>
+                                            <p>慢性的な孤独はうつ病や認知機能の低下を加速させ、時には高齢者の自殺リスクに繋がります。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">シルバーケアの不在</span>
+                                            <h4>高齢者の日常の安全への脅威</h4>
+                                            <p>浴室やトイレなど転倒リスクの高い場所で事故が起きても、即座に検知して対応する手段がありません。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">社会経済</span>
+                                            <h4>社会的コストの増加</h4>
+                                            <p>死後処理、公的福祉、精神保健治療など、防げなかった孤独死は社会全体の経済的損失を招きます。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>なぜ孤独死予防とシルバーケアサービスが必要なのか</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>日常の異常信号を最初に検知しなければならない</strong>
+                                                    <span>生活パターンの変化、活動量の減少、トイレを使用しないなどの小さな兆候をIoTセンサーでリアルタイムに検知することで、危機を防ぐことができます。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>転倒や緊急時にはゴールデンタイムがすべて</strong>
+                                                    <span>一人での浴室での転倒は、発見されなければ致命的です。日常に密着したスマートデバイスが異常を検知し、保護者や救急サービスに自動で繋ぎます。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>繋がりとケアが予防の核心</strong>
+                                                    <span>技術的な検知だけでなく、定期的な安否確認、コミュニティとの接続、心理的支援を継続的に提供し、孤立した単身世帯が社会の中で安全に暮らせるようにします。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">一人でも安全に、老いても尊厳を持って</p>
+                                            <p class="final-sub">日常のスマートケアで、孤独死のない社会を創ります</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 4 Panel -->
+                            <div class="service-entry-panel restroom-panel" id="service-panel-4" style="display:none;">
+                                <div class="obesity-care-content" style="width: 100%;">
+                                    <div class="platform-header">
+                                        <span class="platform-label" style="background-color: var(--primary-light); color: var(--primary);">トイレ環境改善</span>
+                                        <h3 class="platform-title">トイレ環境改善</h3>
+                                        <p class="platform-lead">単なるトイレの提供を超え、子供、女性、障がい者など社会的弱者が安全で快適に利用できるトイレ環境を構築するためのソリューションを提供します。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">35億+</div>
+                                            <div class="stat-label">基本的な衛生設備が不足している人口</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">6.7億</div>
+                                            <div class="stat-label">野外排泄人口 (2023)</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">44%</div>
+                                            <div class="stat-label">学校に男女別のトイレがない途上国</div>
+                                        </div>
+                                        <div class="stat-surface-box" style="background-color: var(--primary-light);">
+                                            <div class="stat-value" style="color: var(--primary);">2億+</div>
+                                            <div class="stat-label">トイレ不足による女子生徒の年間退学者数</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">女性と少女</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">安全な鍵、照明、専用スペース、生理用品の供給と廃棄システム、安全な夜間の導線</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">子供</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">高さ調整可能な洗面台/便器、滑り止め床、ピクトグラムを活用した衛生教育コンテンツ</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">障がい者と高齢者</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">車椅子アクセススペース、安全ハンドル、点字/音声案内、緊急呼び出しシステム</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">地域社会</span>
+                                            <p style="margin-top: 0.5rem; font-weight: 500; color: var(--text-dark);">衛生行動変容教育、地域運営委員会の結成、維持管理能力強化トレーニング</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>なぜトイレ環境の改善が必要なのか</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>非衛生的な環境は健康と命を脅かします</strong>
+                                                    <span>コレラや腸チフスなどの水系感染症の主な原因であり、5歳未満の子供の死亡に直結しています。野外排泄は土壌や水源を汚染し、地域全体の公衆衛生を脅かします。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>女性と子供の安全性と教育の機会の剥奪</strong>
+                                                    <span>女性専用スペースがないことで性暴力のリスクが高まり、生理衛生設備がないために女子生徒の欠席や中退が繰り返されます。子供向けの設備がないことで安全事故のリスクが高まります。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>供給後の管理不足による持続可能性の危機</strong>
+                                                    <span>管理主体なしに設備だけを供給すると、短期間で破損や汚染が進みます。単発の支援ではなく、地域社会の運営能力と持続可能性を一緒にデザインするアプローチが必要です。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">健康的で尊厳ある暮らしを守るための確実な第一歩</p>
+                                            <p class="final-sub">安全なトイレが地域全体の健康と未来を変えます。</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5. CONTACT -->
+    <section class="contact" id="contact" style="padding: 0;">
+        <div data-aos="fade-up" style="width: 100%;">
+            <img src="new_contact_image.jpg" alt="韓国ヘルスケアビル" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+    </section>
+    <!-- 6. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div style="text-align: left;">
+                    <a href="#" class="footer-logo">
+                        <img src="logo.png" alt="韓国ヘルスケア ロゴ" style="height: 38px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                            <span>Korea Healthcare</span>
+                        </div>
+                    </a>
+                    <div class="footer-info" style="margin-top: 1.5rem; line-height: 1.8; max-width: 100%;">
+                        事業者登録番号: 214-88-88888<br>
+                        通信販売業申告番号: 2021-Seoul-00000<br><br>
+                        代表. Taeyang Park<br>
+                        Email. admin@krhc.com<br>
+                        住所. 97 Eungyejungang-ro, Siheung-si, Gyeonggi-do (14923)
+                    </div>
+                </div>
+                <div style="text-align: right;">
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; 2026 Korea Healthcare. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
