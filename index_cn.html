@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩国医疗 | 更好的K-Wellness</title>
+    <meta name="description" content="用数据和技术创造更健康的生活。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_v2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="韩国医疗 标志" style="height: 44px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                <span>Korea Healthcare</span>
+            </div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">MISSIONS</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <div class="lang-selector dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-globe"></i> CHN</button>
+                <div class="dropdown-content">
+                    <a href="index.html">KOR</a>
+                    <a href="index_en.html">ENG</a>
+                    <a href="index_jp.html">JPN</a>
+                    <a href="index_cn.html" class="active">CHN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 1. HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>在人生的每一个瞬间<br>提供更好的K-Wellness</h1>
+            <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.3rem; font-weight: 500;">
+                <br><br><br>
+                我们都因各自的理由，默默地筋疲力尽。<br>
+                然而，我们不能把日常的所有问题都依赖于医生和医院。<br><br><br>
+            </p>
+            <p style="line-height: 1.8; font-size: 1.8rem; font-weight: 500; margin-top: 2rem;">
+                韩国医疗致力于追求人们日常生活中的更好体验。
+            </p>
+        </div>
+    </section>
+    <!-- 2. WHO WE ARE -->
+    <section class="who-we-are" id="about">
+        <div class="container">
+            <div class="who-text" data-aos="fade-up">
+                <h2 class="section-title" style="font-size: 2.1rem; line-height: 1.4;">医生和医院负责治疗疾病。<br>但是，守护生病前后的日常生活则是完全不同的事情。</h2>
+                <p>我们的人生，在医院之外的地方延续得更为长久。</p>
+                <p>健康，是一个从去医院前以及出院那一刻起就开始的健康管理领域。<br>
+                饮食、睡眠、压力、运动——日常生活中的每一个瞬间汇聚在一起，构成了你的健康成绩单。<br>
+                正因如此，我们不能把所有的健康问题完全托付给医生和医院。</p>
+                <p style="margin-top: 1rem; padding: 1rem; background-color: var(--primary-light); border-radius: 8px; border-left: 4px solid var(--accent); color: var(--text-dark);">
+                    <strong>韩国医疗专注于就医前和出院后的生活。</strong><br>
+                    为了让你的日常生活成为最好的治疗方法，我们在非医疗领域提供细致入微的解决方案。
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Parallax Divider -->
+    <div class="parallax-divider">
+        <div data-aos="zoom-in">
+            <h2>融入细致与技术。</h2>
+            <p>在人们的日常生活和各种瞬间中，<br>我们创造出融入细致与技术的K-Wellness。</p>
+        </div>
+    </div>
+    <!-- 3. SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">核心服务</h2>
+            <div class="folder-ui-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="folder-tabs-container">
+                    <button class="folder-tab active" onclick="switchFolderTab(1)">
+                        <span>01</span> 宠物生活平台
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(2)">
+                        <span>02</span> 肥胖护理
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(3)">
+                        <span>03</span> 预防孤独死
+                    </button>
+                    <button class="folder-tab" onclick="switchFolderTab(4)">
+                        <span>04</span> 卫生间环境改善
+                    </button>
+                </div>
+                <div class="folder-body">
+                    <div class="folder-paper">
+                        <form class="services-register-form">
+                            <!-- Service 1 Panel -->
+                            <div class="service-entry-panel pet-platform-panel active" id="service-panel-1" style="display:block;">
+                                <div class="pet-platform-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">宠物生活平台</span>
+                                        <h3 class="platform-title">与宠物共创更健康幸福的生活</h3>
+                                        <p class="platform-lead">宠物不仅仅是家庭的一员；它们对我们的身心健康有着实质性的影响。<br> 借助正确的信息、社区和可靠的产品，宠物生活将变得更加丰富多彩。</p>
+                                    </div>
+                                    <div class="platform-stats grid-3">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">1,500万+</div>
+                                            <div class="stat-label">国内养宠家庭</div>
+                                            <div class="stat-desc">超过所有家庭的25%</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">30%↓</div>
+                                            <div class="stat-label">心血管疾病风险降低</div>
+                                            <div class="stat-desc">美国心脏协会研究</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5万亿+</div>
+                                            <div class="stat-label">国内宠物市场规模</div>
+                                            <div class="stat-desc">预计到2027年突破6万亿韩元</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">身体健康</span>
+                                            <h4>改善心血管健康</h4>
+                                            <p>定期散步和活动可以稳定血压和胆固醇，显著降低患心脏病的风险。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">心理健康</span>
+                                            <h4>缓解压力和焦虑</h4>
+                                            <p>与宠物的互动能降低压力激素，促进幸福激素的分泌，有助于情绪稳定。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">社交联系</span>
+                                            <h4>缓解孤立感与促进交流</h4>
+                                            <p>宠物自然而然地促进了人与人之间的交流，减少了孤立感并增强了归属感。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">生活方式</span>
+                                            <h4>日常规律与使命感</h4>
+                                            <p>每天重复的照顾工作创造了规律的生活节奏，培养了使命感和自我效能感。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>为什么需要专业的平台？</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>经过验证的信息不足</strong>
+                                                    <span>信息泛滥，但来源和可靠性参差不齐。错误的信息会直接威胁宠物的健康，因此需要专家的问答。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>独自承担的困难</strong>
+                                                    <span>从初学者到照顾老年宠物的经验者，烦恼总是源源不断。一个经历过同样情况的人组成的社区是强大的支撑。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>缺乏安心购买的渠道</strong>
+                                                    <span>随着市场的增长，劣质产品和虚假广告也在增加。一个由专家精心挑选产品的购物商城为您提供安全的购物环境。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">关于宠物生活的一切，都在这里</p>
+                                            <p class="final-sub">提问、交流与安心购物——为宠物和主人打造的综合平台</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 2 Panel -->
+                            <div class="service-entry-panel obesity-platform-panel" id="service-panel-2" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">肥胖护理</span>
+                                        <h3 class="platform-title">肥胖不仅仅是体重问题</h3>
+                                        <p class="platform-lead">肥胖是一种威胁整体生活的复合性健康危机，包括睡眠障碍、心血管疾病、糖尿病和心理问题。只有将睡眠和体重这两个核心要素结合起来管理，才能带来根本性的改变。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">38%</div>
+                                            <div class="stat-label">国内成人肥胖率</div>
+                                            <div class="stat-desc">以2023年为基准，持续上升中</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">2倍</div>
+                                            <div class="stat-label">睡眠呼吸暂停综合征风险</div>
+                                            <div class="stat-desc">与正常体重相比</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5倍</div>
+                                            <div class="stat-label">糖尿病发病风险</div>
+                                            <div class="stat-desc">心血管疾病风险同时上升</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">11万亿</div>
+                                            <div class="stat-label">因肥胖造成的社会经济损失</div>
+                                            <div class="stat-desc">国内年度预估费用（韩元）</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">身体疾病</span>
+                                            <h4>心血管及代谢疾病</h4>
+                                            <p>是高血压、血脂异常、2型糖尿病、脂肪肝等慢性代谢疾病的主要危险因素。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">睡眠障碍</span>
+                                            <h4>睡眠呼吸暂停与失眠</h4>
+                                            <p>体脂增加会使气道变窄，加重呼吸暂停，而睡眠质量下降又会进一步促进肥胖，形成恶性循环。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">肌肉骨骼系统</span>
+                                            <h4>关节与脊柱疾病</h4>
+                                            <p>过重的体重会对膝盖、髋关节和脊柱造成持续性负担，引发退行性关节炎和慢性疼痛。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">心理健康</span>
+                                            <h4>抑郁、焦虑与自尊心低下</h4>
+                                            <p>对体型的社会偏见以及激素失衡会增加抑郁症和焦虑障碍的风险，降低生活质量。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">呼吸系统</span>
+                                            <h4>肺功能下降</h4>
+                                            <p>腹部脂肪压迫横膈膜，导致肺活量减少，增加运动时的气短和疲劳感。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">社会经济</span>
+                                            <h4>生产力下降与医疗费用增加</h4>
+                                            <p>慢性疲劳和频繁的疾病会降低工作能力，长期来看会导致巨大的医疗费用支出。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>为什么需要改善睡眠和体重管理？</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>睡眠不足导致肥胖</strong>
+                                                    <span>睡眠不足会减少食欲抑制激素，增加食欲促进激素，导致暴饮暴食。基础代谢率也会下降，如果不解决睡眠问题，即使控制饮食，减重效果也会减半。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>肥胖进一步破坏睡眠</strong>
+                                                    <span>随着体脂的积累，气道变窄，睡眠呼吸暂停加重。由于无法深度睡眠，疲劳感积累，活动量下降，再次导致暴饮暴食，肥胖和睡眠障碍形成恶性循环。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>数据与持续性是减重的关键</strong>
+                                                    <span>盲目的节食会导致肌肉流失和反弹。只有基于个人的生理数据，综合管理饮食、运动和睡眠，才能实现健康的减重和长期的维持。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">改善睡眠，体重就会改变；改变体重，人生就会改变</p>
+                                            <p class="final-sub">基于数据的肥胖护理，为您设计更健康的日常生活</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 3 Panel -->
+                            <div class="service-entry-panel isolated-death-panel" id="service-panel-3" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">预防孤独死</span>
+                                        <h3 class="platform-title">独居不应成为一种风险</h3>
+                                        <p class="platform-lead">随着单身家庭和老年人口的激增，孤独死已不再是特例。现在急需一种能够提前察觉日常生活中无声的危机，并提供联系与关怀的系统。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">750万</div>
+                                            <div class="stat-label">国内单身家庭</div>
+                                            <div class="stat-desc">约占所有家庭的34%，持续增加中</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">3,378件</div>
+                                            <div class="stat-label">年度孤独死发生数</div>
+                                            <div class="stat-desc">以2022年为基准，呈逐年上升趋势</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">5天</div>
+                                            <div class="stat-label">从死亡到发现的平均时间</div>
+                                            <div class="stat-desc">长时间的放置损害了个人的尊严</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">40%</div>
+                                            <div class="stat-label">高风险群体中50岁以上的比例</div>
+                                            <div class="stat-desc">老年人和中老年男性尤其脆弱</div>
+                                        </div>
+                                    </div>
+                                    <div class="problem-cards grid-3">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">社会孤立</span>
+                                            <h4>隔阂与联系不足的加剧</h4>
+                                            <p>当与家人和邻居的联系中断时，紧急情况下寻求帮助的网络也就消失了。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-red">发现延迟</span>
+                                            <h4>死后的长期放置</h4>
+                                            <p>几天甚至几周未被发现的案例频发，损害了尊严并引发社会震动。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">健康差距</span>
+                                            <h4>忽视慢性病，无法应对紧急情况</h4>
+                                            <p>由于缺乏定期的健康监测，在跌倒或心脏骤停等紧急情况下会错过黄金救援时间。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">心理健康</span>
+                                            <h4>抑郁、孤立与自杀风险</h4>
+                                            <p>慢性的孤独会加速抑郁和认知能力下降，有时会增加老年人的自杀风险。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">缺乏银发护理</span>
+                                            <h4>老年人日常安全的威胁</h4>
+                                            <p>即使在浴室或卫生间等高风险区域发生事故，也缺乏立即检测和响应的手段。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-lime">社会经济</span>
+                                            <h4>社会成本的增加</h4>
+                                            <p>死后处理、公共福利、精神健康治疗等——未能预防的孤独死给整个社会带来了经济损失。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>为什么需要预防孤独死和银发护理服务？</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>必须首先检测到日常的异常信号</strong>
+                                                    <span>通过IoT传感器实时检测生活模式的变化、活动量减少、不使用卫生间等微小迹象，可以防患于未然。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>在跌倒或紧急情况下，黄金时间就是一切</strong>
+                                                    <span>一个人在浴室跌倒如果未被发现将是致命的。贴近日常的智能设备能检测到异常，并自动连接监护人和急救服务。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>联系与关怀是预防的核心</strong>
+                                                    <span>除了技术检测，我们还提供定期的安否确认、社区连接和心理支持，确保被孤立的单身家庭能够安全地生活在社会中。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">即使独自一人也安全，即使老去也有尊严</p>
+                                            <p class="final-sub">通过日常的智能护理，创造一个没有孤独死的社会</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 4 Panel -->
+                            <div class="service-entry-panel restroom-panel" id="service-panel-4" style="display:none;">
+                                <div class="obesity-care-content">
+                                    <div class="platform-header">
+                                        <span class="platform-label">卫生间环境改善</span>
+                                        <h3 class="platform-title">卫生间环境改善</h3>
+                                        <p class="platform-lead">不仅提供卫生间，我们还提供解决方案，为儿童、妇女和残疾人等弱势群体打造安全舒适的卫生间环境。</p>
+                                    </div>
+                                    <div class="platform-stats grid-4">
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">35亿+</div>
+                                            <div class="stat-label">缺乏基本卫生设施的人口</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">6.7亿</div>
+                                            <div class="stat-label">露天排便人口 (2023)</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">44%</div>
+                                            <div class="stat-label">学校缺乏男女分设卫生间的发展中国家</div>
+                                        </div>
+                                        <div class="stat-surface-box">
+                                            <div class="stat-value">2亿+</div>
+                                            <div class="stat-label">因卫生间短缺而退学的女学生人数（年度）</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2-custom">
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-purple">女性与少女</span>
+                                            <h4>确保安全与卫生</h4>
+                                            <p>安全的门锁、照明、专属空间、生理用品的供应与废弃系统、安全的夜间路线。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-yellow">儿童</span>
+                                            <h4>引入儿童友好设施</h4>
+                                            <p>高度可调的洗手台/马桶、防滑地板、利用象形图的卫生教育内容。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-green">残疾人与老年人</span>
+                                            <h4>构建无障碍环境</h4>
+                                            <p>轮椅通行空间、安全把手、盲文/语音指引、紧急呼叫系统。</p>
+                                        </div>
+                                        <div class="problem-card">
+                                            <span class="p-badge badge-orange">社区</span>
+                                            <h4>可持续的运营支持</h4>
+                                            <p>卫生行为改变教育、成立社区运营委员会、维护管理能力强化培训。</p>
+                                        </div>
+                                    </div>
+                                    <div class="more-content" style="display: none;">
+                                        <div class="platform-why">
+                                            <h4>为什么需要改善卫生间环境？</h4>
+                                            <ol class="why-list">
+                                                <li>
+                                                    <strong>不卫生的环境威胁健康与生命</strong>
+                                                    <span>这是霍乱和伤寒等水源性疾病的主要原因，直接导致5岁以下儿童的死亡。露天排便会污染土壤和水源，威胁整个社区的公共卫生。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>剥夺了女性和儿童的安全与教育机会</strong>
+                                                    <span>缺乏女性专属空间增加了性暴力的风险，缺乏生理卫生设施导致女学生反复缺勤和退学。缺乏适合儿童的设施增加了安全事故的风险。</span>
+                                                </li>
+                                                <li>
+                                                    <strong>供应后缺乏管理导致的不可持续性危机</strong>
+                                                    <span>如果只提供设施而没有管理主体，设施将在短时间内破损和被污染。需要的不仅仅是一次性援助，而是将社区的运营能力和可持续性结合起来设计的方法。</span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="platform-footer">
+                                            <p class="final-motto">守护健康而有尊严的生活，最坚实的第一步</p>
+                                            <p class="final-sub">一个安全的卫生间，将改变整个社区的健康与未来。</p>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center; margin-top: 2rem;">
+                                        <button type="button" class="btn btn-outline show-more-btn" style="color: var(--primary); border-color: var(--primary);">More <i class="fa-solid fa-chevron-down"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5. CONTACT -->
+    <section class="contact" id="contact" style="padding: 0;">
+        <div data-aos="fade-up" style="width: 100%;">
+            <img src="new_contact_image.jpg" alt="韩国医疗建筑" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+    </section>
+    <!-- 6. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div style="text-align: left;">
+                    <a href="#" class="footer-logo">
+                        <img src="logo.png" alt="韩国医疗 标志" style="height: 38px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.1;">
+                            <span>Korea Healthcare</span>
+                        </div>
+                    </a>
+                    <div class="footer-info" style="margin-top: 1.5rem; line-height: 1.8; max-width: 100%;">
+                        商业登记号码: 214-88-88888<br>
+                        电子商务注册号: 2021-Seoul-00000<br><br>
+                        代表: Taeyang Park<br>
+                        Email: admin@krhc.com<br>
+                        地址: 97 Eungyejungang-ro, Siheung-si, Gyeonggi-do (14923)
+                    </div>
+                </div>
+                <div style="text-align: right;">
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; 2026 Korea Healthcare. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
