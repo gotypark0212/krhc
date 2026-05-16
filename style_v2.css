@@ -1115,3 +1115,41 @@
 
 
 
+
+/* Mobile Dropdown Styling */
+@media (max-width: 768px) {
+    .lang-selector.dropdown {
+        margin: 0;
+        width: 100%;
+        display: block;
+    }
+    .dropbtn {
+        width: 100%;
+        padding: 1.5rem 5%;
+        border-bottom: 1px solid #F3F4F6;
+        color: var(--text-dark) !important;
+        justify-content: flex-start;
+        border-radius: 0;
+    }
+    .dropdown-content {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f9fafb;
+        margin-top: 0;
+    }
+    .dropdown-content.show {
+        animation: fadeInMobile 0.2s ease-in-out;
+    }
+    .dropdown-content a {
+        padding: 1rem 10%;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+    }
+}
+@keyframes fadeInMobile {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
