@@ -1069,10 +1069,12 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
+    left: 50%;
+      transform: translateX(-50%);
     top: 100%;
     background-color: var(--white);
-    min-width: 100px;
+    min-width: 80px;
+      text-align: center;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     border-radius: 8px;
     z-index: 1001;
@@ -1082,7 +1084,7 @@
 .dropdown-content.show { display: block !important; animation: fadeIn 0.2s ease-in-out; }
 .dropdown-content a {
     color: var(--text-dark) !important;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 0;
     text-decoration: none;
     display: block;
     font-size: 0.85rem;
@@ -1105,4 +1107,5 @@
 .dropdown-content a::after {
     display: none !important;
 }
+
 
