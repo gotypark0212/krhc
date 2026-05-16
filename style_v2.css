@@ -107,10 +107,7 @@
         .logo i {
             color: var(--accent);
         }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
             color: var(--white);
             font-weight: 500;
@@ -1082,10 +1079,7 @@
     overflow: hidden;
     margin-top: 0.5rem;
 }
-.lang-selector.dropdown:hover .dropdown-content {
-    display: block;
-    animation: fadeIn 0.2s ease-in-out;
-}
+.dropdown-content.show { display: block !important; animation: fadeIn 0.2s ease-in-out; }
 .dropdown-content a {
     color: var(--text-dark) !important;
     padding: 0.8rem 1.2rem;
@@ -1111,3 +1105,4 @@
 .dropdown-content a::after {
     display: none !important;
 }
+

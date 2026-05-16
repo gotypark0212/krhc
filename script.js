@@ -154,3 +154,35 @@ window.addEventListener('click', (e) => {
         window.closeGuideModal();
     }
 });
+
+// Language Dropdown Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const dropBtns = document.querySelectorAll('.dropbtn');
+    dropBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdownContent = this.nextElementSibling;
+            
+            // Close other dropdowns if any
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                if (content !== dropdownContent) {
+                    content.classList.remove('show');
+                }
+            });
+            
+            dropdownContent.classList.toggle('show');
+        });
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn') && !e.target.closest('.dropbtn')) {
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                }
+            });
+        }
+    });
+});
