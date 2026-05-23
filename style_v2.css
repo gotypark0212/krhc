@@ -1158,11 +1158,12 @@
 /* Mobile Hero Background Position */
 @media (max-width: 768px) {
     .hero {
-        background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(0, 180, 216, 0.6)), url('hero_bg.jpg') 85% center/cover no-repeat !important;
+        background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(0, 180, 216, 0.6)), url('hero_bg.jpg') 80% center/cover no-repeat !important;
         height: 85vh;
         min-height: 500px;
     }
 }
+
 
 
 
