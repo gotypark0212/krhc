@@ -1154,3 +1154,10 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+/* Mobile Hero Background Position */
+@media (max-width: 768px) {
+    .hero {
+        background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(0, 180, 216, 0.6)), url('hero_bg.jpg') right center/cover no-repeat !important;
+    }
+}
