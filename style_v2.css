@@ -1151,12 +1151,18 @@
         margin-top: 0;
     }
     .dropdown-content.show {
+        display: flex !important;
         animation: fadeInMobile 0.2s ease-in-out;
     }
     .dropdown-content a {
-        padding: 1rem 10%;
+        padding: 1rem 0;
         border-bottom: 1px solid #e5e7eb;
+        border-right: 1px solid #e5e7eb;
         text-align: center;
+        flex: 1;
+    }
+    .dropdown-content a:last-child {
+        border-right: none;
     }
 }
 @keyframes fadeInMobile {
