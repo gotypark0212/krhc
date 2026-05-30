@@ -891,6 +891,8 @@
             font-size: 0.9rem;
         }
 
+        .mobile-break { display: none; }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
             .hero h1 { font-size: 3.5rem; }
@@ -941,8 +943,12 @@
             .hero-buttons { flex-direction: column; }
             
             .desktop-only { display: none !important; }
+            .mobile-break { display: inline !important; }
             .who-text { text-align: left; }
-            .who-text .section-title { text-align: left; }
+            .who-text .section-title { 
+                text-align: left; 
+                font-size: 1.1rem !important; 
+            }
             
             .team-grid {
                 grid-template-columns: 1fr;
