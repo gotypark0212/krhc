@@ -943,11 +943,11 @@
             .hero-buttons { flex-direction: column; }
             
             .desktop-only { display: none !important; }
-            .mobile-break { display: inline !important; }
+            .mobile-break { display: block !important; }
             .who-text { text-align: left; }
             .who-text .section-title { 
-                text-align: left; 
-                font-size: 1.1rem !important; 
+                text-align: center; 
+                font-size: calc(2.1rem - 1px) !important; 
             }
             
             .team-grid {
