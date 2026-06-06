@@ -946,7 +946,7 @@
                 font-size: calc(1.3rem - 1px) !important;
             }
             .hero-content p:last-of-type {
-                font-size: calc(1.8rem - 1px) !important;
+                font-size: calc(1.8rem - 2px) !important;
             }
             .desktop-only { display: none !important; }
             .mobile-break { display: block !important; }
