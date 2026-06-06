@@ -956,7 +956,7 @@
                 font-size: calc(2.1rem - 5px) !important; 
             }
             .parallax-divider h2 {
-                font-size: calc(3rem - 1px) !important;
+                font-size: calc(3rem - 3px) !important;
             }
             .who-text p:last-of-type {
                 font-size: calc(1rem + 1px) !important;
