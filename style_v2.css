@@ -945,12 +945,18 @@
             .hero-content p:first-of-type {
                 font-size: calc(1.3rem - 1px) !important;
             }
+            .hero-content p:last-of-type {
+                font-size: calc(1.8rem - 1px) !important;
+            }
             .desktop-only { display: none !important; }
             .mobile-break { display: block !important; }
             .who-text { text-align: left; }
             .who-text .section-title { 
                 text-align: center; 
-                font-size: calc(2.1rem - 2px) !important; 
+                font-size: calc(2.1rem - 3px) !important; 
+            }
+            .parallax-divider h2 {
+                font-size: calc(3rem - 1px) !important;
             }
             .who-text p:last-of-type {
                 font-size: calc(1rem + 1px) !important;
