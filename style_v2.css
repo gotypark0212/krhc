@@ -953,7 +953,7 @@
             .who-text { text-align: left; }
             .who-text .section-title { 
                 text-align: center; 
-                font-size: calc(2.1rem - 3px) !important; 
+                font-size: calc(2.1rem - 5px) !important; 
             }
             .parallax-divider h2 {
                 font-size: calc(3rem - 1px) !important;
