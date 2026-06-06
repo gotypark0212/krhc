@@ -1157,24 +1157,42 @@
         position: static;
         transform: none;
         width: 100%;
-        box-shadow: none;
+        box-shadow: inset 0 3px 6px rgba(0,0,0,0.02);
         border-radius: 0;
-        background-color: #f9fafb;
+        background-color: #F8FAFC;
         margin-top: 0;
+        padding: 1.2rem 5%;
+        gap: 0.8rem;
     }
     .dropdown-content.show {
         display: flex !important;
-        animation: fadeInMobile 0.2s ease-in-out;
+        flex-wrap: wrap;
+        animation: fadeInMobile 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .dropdown-content a {
-        padding: 1rem 0;
-        border-bottom: 1px solid #e5e7eb;
-        border-right: 1px solid #e5e7eb;
+        padding: 0.8rem 0;
+        border: 1px solid #E5E7EB;
+        border-radius: 12px;
         text-align: center;
-        flex: 1;
+        flex: 1 1 calc(50% - 0.8rem);
+        background-color: var(--white);
+        color: var(--text-muted) !important;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
     }
-    .dropdown-content a:last-child {
-        border-right: none;
+    .dropdown-content a.active {
+        background-color: var(--primary);
+        color: var(--white) !important;
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
+        font-weight: 700;
+    }
+    .dropdown-content a:not(.active):hover {
+        background-color: var(--primary-light);
+        color: var(--primary) !important;
+        border-color: var(--primary-light);
+        transform: translateY(-2px);
     }
 }
 @keyframes fadeInMobile {
