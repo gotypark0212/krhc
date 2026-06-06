@@ -988,6 +988,9 @@
             .platform-title {
                 font-size: 1.8rem;
             }
+            .platform-lead {
+                text-align: left;
+            }
             .platform-why {
                 padding: 2rem 1.5rem;
             }
