@@ -1172,38 +1172,25 @@
         border-radius: 0;
         background-color: #F8FAFC;
         margin-top: 0;
-        padding: 3rem 3% 1.5rem 3%;
-        gap: 0.5rem;
+        padding: 2rem 5%;
     }
     .dropdown-content.show {
-        display: flex !important;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
         animation: fadeInMobile 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .dropdown-content.show::before {
-        content: "{";
-        position: absolute;
-        top: 0.5rem;
-        left: 50%;
-        transform: translateX(-50%) rotate(90deg);
-        font-size: 3rem;
-        font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-        color: #D1D5DB;
-        font-weight: 300;
-        line-height: 1;
-    }
     .dropdown-content a {
-        padding: 0.8rem 0;
+        padding: 1rem 0;
         border: 1px solid #E5E7EB;
-        border-radius: 10px;
+        border-radius: 12px;
         text-align: center;
-        flex: 1;
         background-color: var(--white);
         color: var(--text-muted) !important;
-        font-weight: 500;
-        font-size: 0.85rem;
+        font-weight: 600;
+        font-size: 0.95rem;
         transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     }
     .dropdown-content a.active {
         background-color: var(--primary);
