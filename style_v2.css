@@ -935,6 +935,7 @@
                 padding: 1.5rem 5%;
                 display: block;
                 width: 100%;
+                text-align: center;
                 border-bottom: 1px solid #F3F4F6;
             }
             .menu-toggle {
