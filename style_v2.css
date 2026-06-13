@@ -1064,18 +1064,18 @@
 
 /* Custom Reveal Mask Animation */
 [data-aos="custom-reveal"] {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    opacity: 0;
+    filter: blur(15px);
+    transition: opacity 1.5s ease-out, filter 1.5s ease-out;
 }
 [data-aos="custom-reveal"].aos-animate {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    filter: blur(0);
 }
 [data-aos="custom-reveal"] .reveal-image {
-    transform: scale(1.2);
-    transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    width: 100%;
 }
 [data-aos="custom-reveal"].aos-animate .reveal-image {
-    transform: scale(1);
 }
 
 
@@ -1165,31 +1165,44 @@
         border-radius: 0;
     }
     .dropdown-content {
-        position: static;
+        position: relative;
         transform: none;
         width: 100%;
         box-shadow: inset 0 3px 6px rgba(0,0,0,0.02);
         border-radius: 0;
         background-color: #F8FAFC;
         margin-top: 0;
-        padding: 1.2rem 5%;
-        gap: 0.8rem;
+        padding: 3rem 3% 1.5rem 3%;
+        gap: 0.5rem;
     }
     .dropdown-content.show {
         display: flex !important;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         animation: fadeInMobile 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dropdown-content.show::before {
+        content: "{";
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        font-size: 3rem;
+        font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+        color: #D1D5DB;
+        font-weight: 300;
+        line-height: 1;
     }
     .dropdown-content a {
         padding: 0.8rem 0;
         border: 1px solid #E5E7EB;
-        border-radius: 12px;
+        border-radius: 10px;
         text-align: center;
-        flex: 1 1 calc(50% - 0.8rem);
+        flex: 1;
         background-color: var(--white);
         color: var(--text-muted) !important;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         transition: all 0.3s ease;
     }
     .dropdown-content a.active {
